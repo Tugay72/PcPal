@@ -1,7 +1,14 @@
+import { useEffect, useState } from 'react';
 import './App.css';
-import React, { useState } from 'react';
-import { Input, Radio, Space, InputNumber, Slider } from 'antd';
+import columns from './table_columns.js';
+
+
+import { InputNumber, Radio, Space, Slider } from 'antd';
 import { Button, Col, Row, Statistic } from 'antd';
+import { Table } from 'antd';
+
+const fileNames = ['cpu','video-card', 'memory', 'motherboard', 'internal-hard-drive', 'case', 'power-supply'];
+var data = [];
 
 function App() {
   const [price, setPrice] = useState(500);
@@ -9,7 +16,80 @@ function App() {
   const [storage, setStorage] = useState('500GB');
   const [cpuBrand, setCPUBrand] = useState('Either');
   const [gpuBrand, setGPUBrand] = useState('Either');
+  const [filteredParts, setFilteredParts] = useState({});
 
+  const loadJsonFile = (fileName) => {
+    return import(`./datasets/pc_parts/${fileName}.json`);
+  };
+
+  // Find one item by condition (for example: by price)
+  const findOneByCondition = (data, condition) => {
+    for (var i = 10; i < condition; i += 10) {
+      var foundPart = data.find((item) => item.price <= condition && item.price >= condition - i);
+      if (foundPart) {
+        return foundPart;
+      }
+    }
+    console.log('No Match!');
+    return null;
+  };
+
+  // Handle filtering and fetching of data
+  const handleConfigure = async () => {
+    data = [];
+    var leftMoney = price
+    for (let fileName of fileNames) {
+      const fileData = await loadJsonFile(fileName);
+
+      var minPrice = 0
+      var priceMultiplier = 1
+
+      // CPU
+      if(fileName == 'cpu'){
+        minPrice = 60;
+        if (purpose == 'Work' || purpose == 'Engineer'){
+          priceMultiplier = 0.3
+        }
+        else if(purpose == 'Gaming'){
+          priceMultiplier = 0.2
+        }
+        else{
+          priceMultiplier = 0.1
+        }
+      }
+
+      // GPU
+      else if(fileName == 'video-card'){
+        minPrice = 50;
+        if (purpose == 'Gaming' || purpose == 'Engineer'){
+          priceMultiplier = 0.3
+        }
+        else{
+          priceMultiplier = 0.1
+        }
+      }
+      
+      // Continue adding other parts like cpu and gpu filtering
+
+      const calculatedPrice = Math.max(price * priceMultiplier, minPrice);
+      const foundItem = findOneByCondition(fileData.default, calculatedPrice); // ADD Brand filtering from here to other function 
+      if (foundItem){
+
+        leftMoney -= foundItem.price
+        data.push({
+          key: `${fileName}-${foundItem.name}`,
+          part: fileName,
+          brand: foundItem.name, // Check chipset names
+          price: foundItem.price,
+        });
+      }
+    }
+
+    setFilteredParts(data);
+    console.log('Filtered parts:', data);
+  };
+
+  // Handlers for user inputs
   const handlePurpose = (e) => {
     setPurpose(e.target.value);
   };
@@ -23,12 +103,12 @@ function App() {
   };
 
   const handleCPU = (e) => {
-    setCPUBrand(e.target.value)
-  }
+    setCPUBrand(e.target.value);
+  };
 
   const handleGPU = (e) => {
-    setGPUBrand(e.target.value)
-  }
+    setGPUBrand(e.target.value);
+  };
 
   return (
     <div className="App">
@@ -43,6 +123,7 @@ function App() {
             </Col>
           </Row>
         </div>
+
         <div className='selection-content'>
           <Row>
 
@@ -99,7 +180,7 @@ function App() {
                 <hr />
                 <Radio.Group onChange={handleStorage} value={storage}>
                   <Space direction="vertical">
-                  <Radio value={'250GB'}>250GB</Radio>
+                    <Radio value={'250GB'}>250GB</Radio>
                     <Radio value={'500GB'}>500GB</Radio>
                     <Radio value={'1TB'}>1TB</Radio>
                     <Radio value={'2TB+'}>2TB+</Radio>
@@ -135,7 +216,23 @@ function App() {
             </Col>
           </Row>
 
+          <Row>
+            <Col span={10}></Col>
+            <Col span={2}>
+              <Button
+              onClick={handleConfigure} // Trigger filtering when clicking "Configure"
+              style={{ margin: '3rem' }}>
+                  Configure
+              </Button>
+            </Col>
+          </Row>
         </div>
+
+        <Table 
+          style={{ marginBottom: '3rem' }}
+          dataSource={data}
+          columns={columns}
+        ></Table>
       </div>
     </div>
   );
