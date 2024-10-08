@@ -41,7 +41,7 @@ function App() {
     for (let fileName of fileNames) {
       const fileData = await loadJsonFile(fileName);
 
-      var minPrice = 0
+      var minPrice = 5000
       var priceMultiplier = 1
 
       // CPU
@@ -50,23 +50,32 @@ function App() {
         if (purpose == 'Work' || purpose == 'Engineer'){
           priceMultiplier = 0.3
         }
-        else if(purpose == 'Gaming'){
-          priceMultiplier = 0.2
-        }
         else{
-          priceMultiplier = 0.1
+          priceMultiplier = 0.2
         }
       }
 
       // GPU
       else if(fileName == 'video-card'){
-        minPrice = 50;
-        if (purpose == 'Gaming' || purpose == 'Engineer'){
+        minPrice = 70;
+        if (purpose == 'Gaming'){
+          priceMultiplier = 0.4
+        }
+        else if(purpose == 'Engineer'){
           priceMultiplier = 0.3
         }
         else{
           priceMultiplier = 0.1
         }
+      }
+      else if(fileName == 'motherboard'){
+        minPrice = 70;
+        priceMultiplier = 0.15
+      }
+
+      else{
+        minPrice = 20;
+        priceMultiplier = 0.1
       }
       
       // Continue adding other parts like cpu and gpu filtering
@@ -76,14 +85,35 @@ function App() {
       if (foundItem){
 
         leftMoney -= foundItem.price
+        let name;
+        if (fileName == 'video-card'){
+          name = `${foundItem.name} ${foundItem.chipset}`;
+        }
+        else if(fileName == 'internal-hard-drive'){
+          name = `${foundItem.name} ${foundItem.capacity}GB`;
+        }
+        else{
+          name = foundItem.name
+        }
+
         data.push({
           key: `${fileName}-${foundItem.name}`,
           part: fileName,
-          brand: foundItem.name, // Check chipset names
+          brand: name,
           price: foundItem.price,
         });
       }
     }
+    var totalPrice = 0;
+      for (const object of data){
+        totalPrice += object.price
+      }
+      data.push({
+        key: 'Total',
+        part: 'Total Price',
+        brand : '',
+        price : totalPrice + '$'
+      })
 
     setFilteredParts(data);
     console.log('Filtered parts:', data);
@@ -153,7 +183,7 @@ function App() {
                   <Col span={14}>
                     <Slider
                       min={300}
-                      max={2000}
+                      max={5000}
                       onChange={handlePrice}
                       value={typeof price === 'number' ? price : 0}
                     />
@@ -161,7 +191,7 @@ function App() {
                   <Col span={4}>
                     <InputNumber
                       min={300}
-                      max={2000}
+                      max={5000}
                       style={{
                         margin: '0 16px',
                       }}
@@ -229,7 +259,7 @@ function App() {
         </div>
 
         <Table 
-          style={{ marginBottom: '3rem' }}
+          style={{ marginBottom: '3rem', marginTop: '1rem' }}
           dataSource={data}
           columns={columns}
         ></Table>
