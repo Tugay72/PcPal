@@ -2,121 +2,36 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import columns from './table_columns.js';
 
-
 import { InputNumber, Radio, Space, Slider } from 'antd';
 import { Button, Col, Row, Statistic } from 'antd';
 import { Table } from 'antd';
 
+import { findPcPart } from './find_part.js';
 const fileNames = ['cpu','video-card', 'memory', 'motherboard', 'internal-hard-drive', 'case', 'power-supply'];
 var data = [];
 
 function App() {
   const [price, setPrice] = useState(500);
   const [purpose, setPurpose] = useState('Work');
-  const [storage, setStorage] = useState('500GB');
+  const [storage, setStorage] = useState('500');
   const [cpuBrand, setCPUBrand] = useState('Either');
   const [gpuBrand, setGPUBrand] = useState('Either');
-  const [filteredParts, setFilteredParts] = useState({});
-
-  const loadJsonFile = (fileName) => {
-    return import(`./datasets/pc_parts/${fileName}.json`);
-  };
-
-  // Find one item by condition (for example: by price)
-  const findOneByCondition = (data, condition) => {
-    for (var i = 10; i < condition; i += 10) {
-      var foundPart = data.find((item) => item.price <= condition && item.price >= condition - i);
-      if (foundPart) {
-        return foundPart;
-      }
-    }
-    console.log('No Match!');
-    return null;
-  };
+  const [dataSource, setDataSource] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   // Handle filtering and fetching of data
   const handleConfigure = async () => {
-    data = [];
-    var leftMoney = price
-    for (let fileName of fileNames) {
-      const fileData = await loadJsonFile(fileName);
+    setLoading(true); // Start loading
+    try {
+      const data = await findPcPart(price, purpose, storage);
+      setDataSource(data);
 
-      var minPrice = 5000
-      var priceMultiplier = 1
+    } catch (error) {
+      console.error('Error fetching PC parts:', error);
 
-      // CPU
-      if(fileName == 'cpu'){
-        minPrice = 60;
-        if (purpose == 'Work' || purpose == 'Engineer'){
-          priceMultiplier = 0.3
-        }
-        else{
-          priceMultiplier = 0.2
-        }
-      }
-
-      // GPU
-      else if(fileName == 'video-card'){
-        minPrice = 70;
-        if (purpose == 'Gaming'){
-          priceMultiplier = 0.4
-        }
-        else if(purpose == 'Engineer'){
-          priceMultiplier = 0.3
-        }
-        else{
-          priceMultiplier = 0.1
-        }
-      }
-      else if(fileName == 'motherboard'){
-        minPrice = 70;
-        priceMultiplier = 0.15
-      }
-
-      else{
-        minPrice = 20;
-        priceMultiplier = 0.1
-      }
-      
-      // Continue adding other parts like cpu and gpu filtering
-
-      const calculatedPrice = Math.max(price * priceMultiplier, minPrice);
-      const foundItem = findOneByCondition(fileData.default, calculatedPrice); // ADD Brand filtering from here to other function 
-      if (foundItem){
-
-        leftMoney -= foundItem.price
-        let name;
-        if (fileName == 'video-card'){
-          name = `${foundItem.name} ${foundItem.chipset}`;
-        }
-        else if(fileName == 'internal-hard-drive'){
-          name = `${foundItem.name} ${foundItem.capacity}GB`;
-        }
-        else{
-          name = foundItem.name
-        }
-
-        data.push({
-          key: `${fileName}-${foundItem.name}`,
-          part: fileName,
-          brand: name,
-          price: foundItem.price,
-        });
-      }
+    } finally {
+      setLoading(false);
     }
-    var totalPrice = 0;
-      for (const object of data){
-        totalPrice += object.price
-      }
-      data.push({
-        key: 'Total',
-        part: 'Total Price',
-        brand : '',
-        price : totalPrice + '$'
-      })
-
-    setFilteredParts(data);
-    console.log('Filtered parts:', data);
   };
 
   // Handlers for user inputs
@@ -210,10 +125,10 @@ function App() {
                 <hr />
                 <Radio.Group onChange={handleStorage} value={storage}>
                   <Space direction="vertical">
-                    <Radio value={'250GB'}>250GB</Radio>
-                    <Radio value={'500GB'}>500GB</Radio>
-                    <Radio value={'1TB'}>1TB</Radio>
-                    <Radio value={'2TB+'}>2TB+</Radio>
+                    <Radio value={'250'}>250GB</Radio>
+                    <Radio value={'500'}>500GB</Radio>
+                    <Radio value={'1000'}>1TB</Radio>
+                    <Radio value={'2000'}>2TB+</Radio>
                   </Space>
                 </Radio.Group>
               </div>
@@ -250,7 +165,7 @@ function App() {
             <Col span={10}></Col>
             <Col span={2}>
               <Button
-              onClick={handleConfigure} // Trigger filtering when clicking "Configure"
+              onClick={handleConfigure}
               style={{ margin: '3rem' }}>
                   Configure
               </Button>
@@ -260,7 +175,7 @@ function App() {
 
         <Table 
           style={{ marginBottom: '3rem', marginTop: '1rem' }}
-          dataSource={data}
+          dataSource={dataSource}
           columns={columns}
         ></Table>
       </div>
