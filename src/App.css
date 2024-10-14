@@ -24,11 +24,11 @@
 
 .content-box{
   
-  width: 10rem;
+  width: 12rem;
   height: 16rem;
 
   margin: 0 0 0 1rem;
-  padding: 0.25rem 4rem 4rem 1rem;
+  padding: 0.25rem 2rem 4rem 1rem;
 
   color: rgb(22, 22, 22);
   background-color: rgb(255, 244, 244);
@@ -42,4 +42,8 @@ hr{
 
 p{
   font-weight: 600;
+}
+
+.ant-checkbox-wrapper{
+  margin-bottom: 0.5rem;
 }

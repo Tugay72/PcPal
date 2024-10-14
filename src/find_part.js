@@ -12,33 +12,95 @@ const loadJsonFile = (fileName) => {
   };
 
   // Find one item by condition (for example: by price)
-  const findOneByCondition = (data, condition, fileName, storage) => {
+  const findOneByCondition = (data, condition, fileName, storage, cpuBrand, gpuBrand, microATX) => {
     for (var i = condition; i >= 0; i -= 10) {
-        console.log(fileName, condition, i)
-        var foundPart = data.find((item) => item.price <= condition && item.price >= i);
-        if (foundPart) {
-            if (fileName == 'internal-hard-drive'){
-                console.log(foundPart.capacity)
-                if (foundPart.capacity <= storage + 50){
+        var foundIndex = data.findIndex((item) => item.price <= condition && item.price >= i);
+        if (foundIndex !== -1) {
+            var foundPart = data[foundIndex];
+
+            //FIX
+            if (fileName == 'internal-hard-drive' ){
+                var numericStorage = parseInt(storage);
+                if(foundPart.capacity <= (numericStorage + 50) && foundPart.capacity >= (numericStorage - 100)){
+                    return foundPart;    
+                }
+                else{
+                    data.splice(foundIndex, 1);
+                    continue;
+                }
+            }
+            else if (fileName == 'cpu' && cpuBrand != 'Either'){
+                if(cpuBrand == 'Intel' && foundPart.name.includes('Intel')){ // Intel Cpu's
                     return foundPart;
                 }
-                continue;
+                else if(cpuBrand == 'AMD' && foundPart.name.includes('AMD')){ // AMD Cpu's
+                    return foundPart;
+                }
+                else{
+                    continue;
+                }
             }
+            else if (fileName == 'video-card' && gpuBrand != 'Either'){
+                if(gpuBrand == 'Nvidia' && foundPart.chipset.includes('GeForce')){ // Intel Cpu's
+                    return foundPart;
+                }
+                else if(gpuBrand == 'AMD' && foundPart.chipset.includes('Radeon')){ // AMD Cpu's
+                    return foundPart;
+                }
+                else{
+                    continue;
+                }
+            }
+            else if (fileName == 'motherboard'){
+                if(microATX){
+                    console.log(foundPart.form_factor)
+                    if(foundPart.form_factor.includes('MicroATX')){
+                        console.log(foundPart.form_factor)
+                        return foundPart;
+                    }
+                    else{
+                        data.splice(foundIndex, 1);
+                        continue
+                    }
+                }
+                else{
+                    return foundPart;
+                }
+            }
+            else if (fileName == 'case'){
+                if(microATX){
+                    if(foundPart.type.includes('MicroATX')){
+                        return foundPart;
+                    }
+                    else{
+                        data.splice(foundIndex, 1);
+                        continue
+                    }
+                }
+                else{
+                    return foundPart;
+                }
+            }
+
             return foundPart;
         }
     }
     //Do something to prevent getting null data for storage cause there are too many null objects in internal-hard-drive file
     console.log('No Match!');
-    return null;
+    foundPart = data.find((item) => item.price <= 100);
+    return foundPart
+    
 };
 
-export const findPcPart = async (price, purpose, storage) => {
+// Set the price range and push the found item into the data array
+export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, includeOS, microATX) => {
     data = [];
-    var leftMoney = price
+    //var leftMoney = price
     for (let fileName of fileNames) {
         const fileData = await loadJsonFile(fileName);
 
         
+        // Set the price scale for each part according to the total budget
         if (price < 500){
             priceRange = 0    
         }
@@ -62,10 +124,10 @@ export const findPcPart = async (price, purpose, storage) => {
         
 
         const calculatedPrice = Math.max(price * priceMultiplier, minPrice);
-        const foundItem = findOneByCondition(fileData.default, calculatedPrice, fileName, storage); // ADD Brand filtering from here to other function 
+        const foundItem = findOneByCondition(fileData.default, calculatedPrice, fileName, storage, cpuBrand, gpuBrand, microATX); // ADD Brand filtering from here to other function 
         if (foundItem){
 
-            leftMoney -= foundItem.price
+            // leftMoney -= foundItem.price
             let name;
             if (fileName == 'video-card'){
             name = `${foundItem.name} ${foundItem.chipset}`;
@@ -85,6 +147,15 @@ export const findPcPart = async (price, purpose, storage) => {
             });
         }
     }
+    if(includeOS){
+    data.push({
+        key: 'os',
+        part: 'OS',
+        brand : 'Windows 11 Home',
+        price : 119.99
+        })
+    }
+
     var totalPrice = 0;
       for (const object of data){
         totalPrice += object.price
@@ -96,5 +167,5 @@ export const findPcPart = async (price, purpose, storage) => {
         price : totalPrice.toFixed(2) + '$'
       })
 
-    return data
+    return data;
 };

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import columns from './table_columns.js';
 
-import { InputNumber, Radio, Space, Slider } from 'antd';
+import { InputNumber, Radio, Space, Slider, Checkbox } from 'antd';
 import { Button, Col, Row, Statistic } from 'antd';
 import { Table } from 'antd';
 
@@ -17,13 +17,15 @@ function App() {
   const [cpuBrand, setCPUBrand] = useState('Either');
   const [gpuBrand, setGPUBrand] = useState('Either');
   const [dataSource, setDataSource] = useState([]);
+  const [includeOS, setIncludeOS] = useState(false);
+  const [microATX, setMicroATX] = useState(false);
   const [loading, setLoading] = useState(false);
 
   // Handle filtering and fetching of data
   const handleConfigure = async () => {
     setLoading(true); // Start loading
     try {
-      const data = await findPcPart(price, purpose, storage);
+      const data = await findPcPart(price, purpose, storage, cpuBrand, gpuBrand, includeOS, microATX);
       setDataSource(data);
 
     } catch (error) {
@@ -53,6 +55,14 @@ function App() {
 
   const handleGPU = (e) => {
     setGPUBrand(e.target.value);
+  };
+
+  const handleOS = (e) => {
+    setIncludeOS(e.target.checked);
+  };
+  
+  const handleCaseType = (e) => {
+    setMicroATX(e.target.checked);
   };
 
   return (
@@ -157,6 +167,17 @@ function App() {
                     <Radio value={'Either'}>Either</Radio>
                   </Space>
                 </Radio.Group>
+              </div>
+            </Col>
+
+            {/*Other Preferences */}
+            <Col>
+              <div className='content-box'>
+                <p>Other Preferences</p>
+                <hr></hr>
+                <Checkbox onChange={handleOS}>Windows 11 (+119.99$)</Checkbox>
+                <Checkbox onChange={handleCaseType}>Micro ATX Case</Checkbox>
+                
               </div>
             </Col>
           </Row>
