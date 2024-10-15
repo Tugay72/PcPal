@@ -1,0 +1,90 @@
+.App{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+  min-height: 100vh;
+}
+
+.content {
+  color: aliceblue;
+}
+
+.header-content{
+  text-align: center;
+  margin-top: 12rem;
+
+}
+
+.selection-content{
+  margin: 8rem 1rem 1rem 1rem;
+}
+
+.content-box{
+  
+  width: 12rem;
+  height: 16rem;
+
+  margin: 0 0 0 1rem;
+  padding: 0.25rem 2rem 4rem 1rem;
+
+  color: rgb(22, 22, 22);
+  background-color: rgb(255, 244, 244);
+  border-radius: 0.5rem;
+}
+
+.summary-table{
+  margin: 16rem 0 12rem 0;
+}
+
+/* Footer.css */
+/* Footer Styles */
+.footer {
+  background-color: #181818; /* Footer background */
+  color: #ECF0F1; /* Footer text color */
+  text-align: center; /* Center the footer text */
+  position: relative; /* Keep the footer fixed */
+  bottom: 0; /* Align to the bottom */
+  padding: 0; /* Footer padding */
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-link {
+  color: #ECF0F1;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+hr{
+  width: 12rem;
+  border: solid #e9dfdf 1px;
+}
+
+p{
+  font-weight: 600;
+}
+
+.ant-checkbox-wrapper{
+  margin-bottom: 0.5rem;
+}

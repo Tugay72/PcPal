@@ -1,49 +1,10 @@
 .App{
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-  min-height: 150vh;
-}
-
-.content {
-
-  color: aliceblue;
-}
-
-.header-content{
-  text-align: center;
-
-}
-
-.selection-content{
-  margin: 10rem 1rem 1rem 1rem;
-}
-
-.content-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   
-  width: 12rem;
-  height: 16rem;
-
-  margin: 0 0 0 1rem;
-  padding: 0.25rem 2rem 4rem 1rem;
-
-  color: rgb(22, 22, 22);
-  background-color: rgb(255, 244, 244);
-  border-radius: 0.5rem;
-}
-
-hr{
-  width: 12rem;
-  border: solid #e9dfdf 1px;
-}
-
-p{
-  font-weight: 600;
-}
-
-.ant-checkbox-wrapper{
-  margin-bottom: 0.5rem;
-}
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    min-height: 100vh;
+  }

@@ -1,0 +1,24 @@
+/* Navbar.css */
+.navbar {
+  background: #001529; /* Dark background */
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  padding: 0; /* Footer padding */
+  width: 100%;
+}
+.logo {
+  color: #ffffff; /* White text color for logo */
+  font-size: 1.5rem; /* Larger font size for logo */
+  padding: 0 2rem 0 1rem;
+}
+
+.nav-labels {
+  display: flex; /* Flexbox for label layout */
+  gap: 20px; /* Space between labels */
+}
+
+.nav-label {
+  color: #ffffff; /* White text color for labels */
+  font-size: 1rem; /* Font size for labels */
+  cursor: pointer; /* Show pointer cursor */
+}
