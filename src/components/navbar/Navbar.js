@@ -38,17 +38,18 @@ const Navbar = () => {
     </Menu>
   );
 
+  // Fix : Use menu instead of overlay but using menu gives errors
   return (
     <Header className="navbar">
       <div className="logo">PcPal</div>
       <div className="nav-labels">
-        <Dropdown overlay={menu1} placement="bottomCenter" arrow>
+        <Dropdown overlay={menu1} placement="bottom" arrow>
           <span className="nav-label">PC Parts</span>
         </Dropdown>
-        <Dropdown overlay={menu2} placement="bottomCenter" arrow>
+        <Dropdown overlay={menu2} placement="bottom" arrow>
           <span className="nav-label">Pre-Builds</span>
         </Dropdown>
-        <Dropdown overlay={menu3} placement="bottomCenter" arrow>
+        <Dropdown overlay={menu3} placement="bottom" arrow>
           <span className="nav-label">Laptops</span>
         </Dropdown>
       </div>

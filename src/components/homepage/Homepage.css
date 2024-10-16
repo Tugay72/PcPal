@@ -1,0 +1,51 @@
+.Homepage{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  color: aliceblue;
+}
+
+.header-content{
+  text-align: center;
+  margin-top: 12rem;
+
+}
+
+.selection-content{
+  margin: 8rem 1rem 1rem 1rem;
+}
+
+.content-box{
+  
+  width: 12rem;
+  height: 16rem;
+
+  margin: 0 0 0 1rem;
+  padding: 0.25rem 2rem 4rem 1rem;
+
+  color: rgb(22, 22, 22);
+  background-color: rgb(255, 244, 244);
+  border-radius: 0.5rem;
+}
+
+.summary-table{
+  margin: 16rem 0 12rem 0;
+}
+
+hr{
+  width: 12rem;
+  border: solid #e9dfdf 1px;
+}
+
+p{
+  font-weight: 600;
+}
+
+.ant-checkbox-wrapper{
+  margin-bottom: 0.5rem;
+}

@@ -6,5 +6,7 @@
     flex-direction: column;
   
     background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    background-size: cover; /* Ensures the background covers the whole viewport */
+    background-position: center;
     min-height: 100vh;
   }

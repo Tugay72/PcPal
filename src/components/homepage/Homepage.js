@@ -1,11 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
-import './Homapage.css'
-import columns from './table_columns.js';
-import { InputNumber, Radio, Space, Slider, Checkbox } from 'antd';
-import { Button, Col, Row, Statistic } from 'antd';
-import { Table } from 'antd';
-import { findPcPart } from './find_part.js';
-import Navbar from './Navbar.js';
+import './Homepage.css'
+import columns from '../../table_columns.js';
+import { InputNumber, Radio, Space, Slider, Checkbox, Button, Col, Row, Statistic, Table } from 'antd';
+import { findPcPart } from '../../functions/find_part.js';
 
 const fileNames = ['cpu', 'video-card', 'memory', 'motherboard', 'internal-hard-drive', 'case', 'power-supply'];
 
@@ -22,10 +19,12 @@ function Homepage() {
   const [loading, setLoading] = useState(false);
   const tableRef = useRef(null);
 
+  //Scroll effect after pressing configure button
   const handleScroll = () => {
     tableRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  //Configure PC
   const handleConfigure = async () => {
     setLoading(true);
     try {
@@ -50,7 +49,7 @@ function Homepage() {
   const handleCaseType = (e) => setMicroATX(e.target.checked);
 
   return (
-    <div className="App">
+    <div className="Homepage">
       <div className="content">
         <div className="header-content">
           <Row>
@@ -174,27 +173,9 @@ function Homepage() {
         </div>
 
         <div className="summary-table" ref={tableRef}>
-          <Table style={{ marginBottom: '3rem', marginTop: '1rem' }} dataSource={dataSource} columns={columns}></Table>
+          <Table dataSource={dataSource} columns={columns}></Table>
         </div>
       </div>
-      <footer className="footer">
-        <div className="footer-content">
-          <p>© 2024 PcPal. All Rights Reserved.</p>
-          
-          <div className="footer-sections">
-            <div className="footer-section">
-              <p>You dream, we build!.</p>
-            </div>
-            <br />
-            <div className="footer-section">
-              <h4>Contact</h4>
-              <p>Email: support@yourcompany.com</p>
-              <p>Phone: (123) 456-7890</p>
-            </div>
-            
-          </div>
-        </div>
-      </footer>
 
     </div>
   );
