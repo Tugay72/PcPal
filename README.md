@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+## PcPal
+A comprehensive PC configuration tool designed to help users create PC builds based on their needs and budget. PcPal provides recommendations for components, offers budget suggestions, and assists with selecting compatible hardware.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Description](#description)
+- [Features](#features)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact Information](#contact-information)
+- [Images](#images)
+- [Notes](#notes)
 
-## Available Scripts
+## Description
+PcPal is a PC configuration assistant that guides users through the process of building a custom PC. The app considers user preferences such as budget, use case (e.g., gaming, work, school), and specific component preferences.
 
-In the project directory, you can run:
+With PcPal, you can:
 
-### `npm start`
+Customize builds according to use cases like gaming, engineering, and more.
+Get recommendations for complete pre-built systems.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+Pre-Build Recommendations: Explore complete system builds for different use cases (gaming, work, etc.).
+Budget Assistant: Adjust your budget and receive suggestions for parts based on your price range.
+Operating System Options: Select your preferred operating system or opt for no OS.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Tugay72/Hotel-Management-System.git
+2. Navigate to the project directory:
+   ```bash
+   cd Hotel-Management-System
+3. Install dependencies (if applicable):
+   ```bash
+   npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
+Fork the repository.
+Create a new branch (git checkout -b feature-branch).
+Make your changes.
+Commit your changes (git commit -m 'Add some feature').
+Push to the branch (git push origin feature-branch).
+Create a new Pull Request.
 
-### `npm run build`
+## License
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. See the LICENSE file for details.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Acknowledgments
+Ant Design for UI components.
+## Contact Information
+Project Link: https://github.com/Tugay72/PcPal
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Images :
+![Homepage](github_assets/pcpal.png) 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Notes
+Adjustments: Modify the installation and usage instructions based on the actual setup for your project, especially if you're using specific frameworks or technologies.
+Data: Ensure compatibility data is kept up to date with the latest PC parts releases.
+Licensing and Acknowledgments: This project uses a Creative Commons NonCommercial License.
