@@ -54,7 +54,7 @@ Ant Design for UI components.
 ## Contact Information
 Project Link: https://github.com/Tugay72/PcPal
 
-## Images :
+## Images
 ![Homepage](github_assets/pcpal.png) 
 
 ## Notes
