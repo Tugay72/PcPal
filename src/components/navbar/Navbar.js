@@ -1,7 +1,7 @@
 // Navbar.js
 import React from 'react';
 import { Layout, Menu, Dropdown } from 'antd';
-import './Navbar.css'; // Import the CSS for the Navbar
+import './Navbar.css';
 
 const { Header } = Layout;
 
