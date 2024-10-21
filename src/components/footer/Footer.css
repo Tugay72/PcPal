@@ -1,10 +1,10 @@
 .footer {
-    background-color: #181818; /* Footer background */
-    color: #ECF0F1; /* Footer text color */
-    text-align: center; /* Center the footer text */
-    position: relative; /* Keep the footer fixed */
-    bottom: 0; /* Align to the bottom */
-    padding: 0; /* Footer padding */
+    background-color: #181818;
+    color: #ECF0F1;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    padding: 0;
     width: 100%;
   }
   
