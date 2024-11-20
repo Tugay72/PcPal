@@ -1,6 +1,6 @@
 ## PcPal
 A comprehensive PC configuration tool designed to help users create PC builds based on their needs and budget. PcPal provides recommendations for components, offers budget suggestions, and assists with selecting compatible hardware.
-
+ 
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
