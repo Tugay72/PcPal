@@ -64,112 +64,105 @@ function Homepage() {
                 </div>
 
                 <div className="selection-content">
-                    <Row>
-                        {/* Purpose Section */}
-                        <Col>
-                            <div className="content-box">
-                                <p>Purpose</p>
-                                <hr />
-                                <Radio.Group onChange={handlePurpose} value={purpose}>
-                                    <Space direction="vertical">
-                                        <Radio value={'Work'}>Work</Radio>
-                                        <Radio value={'School'}>School</Radio>
-                                        <Radio value={'Gaming'}>Gaming</Radio>
-                                        <Radio value={'Engineer'}>Engineer</Radio>
-                                        <Radio value={'Just Google'}>Just Google</Radio>
-                                    </Space>
-                                </Radio.Group>
-                            </div>
-                        </Col>
+                    <div style={{
+                        display: 'flex',
+                        displayDirection: 'row',
+                        marginBottom: '1rem'
+                    }}>
+                        <div className="content-box">
+                            <p>Purpose</p>
+                            <hr />
+                            <Radio.Group onChange={handlePurpose} value={purpose}>
+                                <Space direction="vertical">
+                                    <Radio value={'Work'}>Work</Radio>
+                                    <Radio value={'School'}>School</Radio>
+                                    <Radio value={'Gaming'}>Gaming</Radio>
+                                    <Radio value={'Engineer'}>Engineer</Radio>
+                                    <Radio value={'Just Google'}>Just Google</Radio>
+                                </Space>
+                            </Radio.Group>
+                        </div>
 
-                        {/* Price Section */}
-                        <Col>
-                            <div className="content-box">
-                                <p>Budget ($)</p>
-                                <hr />
-                                <Row>
-                                    <Col span={14}>
-                                        <Slider
-                                            min={300}
-                                            max={5000}
-                                            onChange={handlePrice}
-                                            value={typeof price === 'number' ? price : 0}
-                                        />
-                                    </Col>
-                                    <Col span={4}>
-                                        <InputNumber
-                                            min={300}
-                                            max={5000}
-                                            style={{ margin: '0 16px' }}
-                                            value={price}
-                                            onChange={handlePrice}
-                                        />
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>
+                        <div className="content-box">
+                            <p>Budget ($)</p>
+                            <hr />
+                            <Slider
+                                min={300}
+                                max={5000}
+                                onChange={handlePrice}
+                                value={typeof price === 'number' ? price : 0}
+                            />
 
-                        {/* Storage Needs Section */}
-                        <Col>
-                            <div className="content-box">
-                                <p>Storage</p>
-                                <hr />
-                                <Radio.Group onChange={handleStorage} value={storage}>
-                                    <Space direction="vertical">
-                                        <Radio value={'250'}>250GB</Radio>
-                                        <Radio value={'500'}>500GB</Radio>
-                                        <Radio value={'1000'}>1TB</Radio>
-                                        <Radio value={'2000'}>2TB+</Radio>
-                                    </Space>
-                                </Radio.Group>
-                            </div>
-                        </Col>
+                            <InputNumber
+                                min={300}
+                                max={5000}
+                                style={{ margin: '0 16px' }}
+                                value={price}
+                                onChange={handlePrice}
+                            />
+                        </div>
+                    </div>
 
-                        {/* Brands Section */}
-                        <Col>
-                            <div className="content-box">
-                                <p>CPU Brand Preference</p>
-                                <hr />
-                                <Radio.Group onChange={handleCPU} value={cpuBrand}>
-                                    <Space direction="vertical">
-                                        <Radio value={'Intel'}>Intel</Radio>
-                                        <Radio value={'AMD'}>AMD</Radio>
-                                        <Radio value={'Either'}>Either</Radio>
-                                    </Space>
-                                </Radio.Group>
 
-                                <br /> <br />
-                                <p>GPU Brand Preference</p>
-                                <hr />
-                                <Radio.Group onChange={handleGPU} value={gpuBrand}>
-                                    <Space direction="vertical">
-                                        <Radio value={'Nvidia'}>Nvidia</Radio>
-                                        <Radio value={'AMD'}>AMD</Radio>
-                                        <Radio value={'Either'}>Either</Radio>
-                                    </Space>
-                                </Radio.Group>
-                            </div>
-                        </Col>
+                    <div style={{
+                        display: 'flex',
+                        displayDirection: 'row',
+                        marginBottom: '1rem'
+                    }}>
 
-                        {/* Other Preferences */}
-                        <Col>
-                            <div className="content-box">
-                                <p>Other Preferences</p>
-                                <hr />
-                                <Checkbox onChange={handleOS}>Windows 11 (+119.99$)</Checkbox>
-                                <Checkbox onChange={handleCaseType}>Micro ATX Case</Checkbox>
-                            </div>
-                        </Col>
-                    </Row>
+                        <div className="content-box">
+                            <p>Storage</p>
+                            <hr />
+                            <Radio.Group onChange={handleStorage} value={storage}>
+                                <Space direction="vertical">
+                                    <Radio value={'250'}>250GB</Radio>
+                                    <Radio value={'500'}>500GB</Radio>
+                                    <Radio value={'1000'}>1TB</Radio>
+                                    <Radio value={'2000'}>2TB+</Radio>
+                                </Space>
+                            </Radio.Group>
+                        </div>
 
-                    <Row>
-                        <Col span={10}></Col>
-                        <Col span={2}>
-                            <Button onClick={handleConfigure} style={{ margin: '3rem' }}>
-                                Configure
-                            </Button>
-                        </Col>
-                    </Row>
+                        <div className="content-box">
+                            <p>CPU Brand Preference</p>
+                            <hr />
+                            <Radio.Group onChange={handleCPU} value={cpuBrand}>
+                                <Space direction="vertical">
+                                    <Radio value={'Intel'}>Intel</Radio>
+                                    <Radio value={'AMD'}>AMD</Radio>
+                                    <Radio value={'Either'}>Either</Radio>
+                                </Space>
+                            </Radio.Group>
+
+                            <br /> <br />
+                            <p>GPU Brand Preference</p>
+                            <hr />
+                            <Radio.Group onChange={handleGPU} value={gpuBrand}>
+                                <Space direction="vertical">
+                                    <Radio value={'Nvidia'}>Nvidia</Radio>
+                                    <Radio value={'AMD'}>AMD</Radio>
+                                    <Radio value={'Either'}>Either</Radio>
+                                </Space>
+                            </Radio.Group>
+                        </div>
+
+                        <div className="content-box">
+                            <p>Other Preferences</p>
+                            <hr />
+                            <Checkbox onChange={handleOS}>Windows 11 (+119.99$)</Checkbox>
+                            <Checkbox onChange={handleCaseType}>Micro ATX Case</Checkbox>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <Button onClick={handleConfigure} style={{ margin: '3rem' }}>
+                        Configure
+                    </Button>
+
                 </div>
 
                 <div className="summary-table" ref={tableRef}>

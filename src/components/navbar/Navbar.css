@@ -1,10 +1,15 @@
 /* Navbar.css */
 .navbar {
-    background: #001529;
+    background: transparent;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 0;
     width: 100%;
+    backdrop-filter: blur(16px);
+    z-index: 100;
 }
 .logo {
     color: #ffffff;
