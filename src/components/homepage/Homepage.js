@@ -111,6 +111,45 @@ function Homepage() {
                     }}>
 
                         <div className="content-box">
+                            <p>CPU Brand Preference</p>
+                            <hr />
+                            <Radio.Group onChange={handleCPU} value={cpuBrand}>
+                                <Space direction="vertical">
+                                    <Radio value={'Intel'}>Intel</Radio>
+                                    <Radio value={'AMD'}>AMD</Radio>
+                                    <Radio value={'Either'}>Either</Radio>
+                                </Space>
+                            </Radio.Group>
+
+
+                        </div>
+
+                        <div className="content-box">
+                            <p>GPU Brand Preference</p>
+                            <hr />
+                            <Radio.Group onChange={handleGPU} value={gpuBrand}>
+                                <Space direction="vertical">
+                                    <Radio value={'Nvidia'}>Nvidia</Radio>
+                                    <Radio value={'AMD'}>AMD</Radio>
+                                    <Radio value={'Intel'}>Intel</Radio>
+                                    <Radio value={'Either'}>Either</Radio>
+                                </Space>
+                            </Radio.Group>
+                        </div>
+
+                        <div className="content-box">
+                            <p>Ram</p>
+                            <hr />
+                            <Radio.Group onChange={handleStorage} value={storage}>
+                                <Space direction="vertical">
+                                    <Radio value={'8'}>8GB</Radio>
+                                    <Radio value={'16'}>16GB</Radio>
+                                    <Radio value={'32'}>32GB</Radio>
+                                    <Radio value={'64'}>64GB</Radio>
+                                </Space>
+                            </Radio.Group>
+                        </div>
+                        <div className="content-box">
                             <p>Storage</p>
                             <hr />
                             <Radio.Group onChange={handleStorage} value={storage}>
@@ -123,28 +162,8 @@ function Homepage() {
                             </Radio.Group>
                         </div>
 
-                        <div className="content-box">
-                            <p>CPU Brand Preference</p>
-                            <hr />
-                            <Radio.Group onChange={handleCPU} value={cpuBrand}>
-                                <Space direction="vertical">
-                                    <Radio value={'Intel'}>Intel</Radio>
-                                    <Radio value={'AMD'}>AMD</Radio>
-                                    <Radio value={'Either'}>Either</Radio>
-                                </Space>
-                            </Radio.Group>
 
-                            <br /> <br />
-                            <p>GPU Brand Preference</p>
-                            <hr />
-                            <Radio.Group onChange={handleGPU} value={gpuBrand}>
-                                <Space direction="vertical">
-                                    <Radio value={'Nvidia'}>Nvidia</Radio>
-                                    <Radio value={'AMD'}>AMD</Radio>
-                                    <Radio value={'Either'}>Either</Radio>
-                                </Space>
-                            </Radio.Group>
-                        </div>
+
 
                         <div className="content-box">
                             <p>Other Preferences</p>
@@ -152,7 +171,6 @@ function Homepage() {
                             <Checkbox onChange={handleOS}>Windows 11 (+119.99$)</Checkbox>
                             <Checkbox onChange={handleCaseType}>Micro ATX Case</Checkbox>
                         </div>
-
                     </div>
 
 
