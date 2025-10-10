@@ -62,7 +62,7 @@ const findOneByCondition = (data, condition, fileName, storage, cpuBrand, gpuBra
             else if (fileName == 'motherboard') {
                 if (microATX) {
                     console.log(foundPart.form_factor)
-                    if (foundPart.form_factor.includes('MicroATX')) {
+                    if (foundPart.form_factor.includes('Micro-ATX')) {
                         console.log(foundPart.form_factor)
                         return foundPart;
                     }

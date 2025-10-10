@@ -1,8 +1,8 @@
 const columns = [
     {
-      title: 'Part',
-      dataIndex: 'part',
-      key: 'part',
+        title: 'Part',
+        dataIndex: 'part',
+        key: 'part',
     },
     {
         title: 'Brand',
@@ -10,9 +10,9 @@ const columns = [
         key: 'brand',
     },
     {
-      title: 'Price',
-      dataIndex: 'price',
-      key: 'price',
+        title: 'Avg Price ($)',
+        dataIndex: 'price',
+        key: 'price',
     },
 ];
 

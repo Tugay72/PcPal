@@ -11,17 +11,29 @@ function Homepage() {
     const [price, setPrice] = useState(500);
     const [purpose, setPurpose] = useState('Work');
     const [storage, setStorage] = useState('500');
+    const [ram, setRam] = useState('16');
     const [cpuBrand, setCPUBrand] = useState('Either');
     const [gpuBrand, setGPUBrand] = useState('Either');
     const [dataSource, setDataSource] = useState([]);
     const [includeOS, setIncludeOS] = useState(false);
     const [microATX, setMicroATX] = useState(false);
     const [loading, setLoading] = useState(false);
+
     const tableRef = useRef(null);
+    const filterTabRef = useRef(null);
+
+    const [filterOpened, setFilterOpened] = useState(false);
+
+    const ramOptions = [
+        { label: 'DDR4', value: 'ddr4' },
+        { label: 'DDR5', value: 'ddr5' },
+        { label: 'Either', value: 'either' },
+    ];
 
     //Scroll effect after pressing configure button
-    const handleScroll = () => {
-        tableRef.current.scrollIntoView({ behavior: 'smooth' });
+    const handleScroll = (ref) => {
+        console.log(ref)
+        ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     //Configure PC
@@ -34,15 +46,21 @@ function Homepage() {
         } catch (error) {
             console.error('Error fetching PC parts:', error);
         } finally {
-            setTimeout(handleScroll, 1);
+            setTimeout(handleScroll(tableRef), 1);
             setLoading(false);
         }
     };
+
+    const handleFilter = async () => {
+        setFilterOpened(!filterOpened);
+        setTimeout(handleScroll(filterTabRef), 1);
+    }
 
     // Handlers for user inputs
     const handlePurpose = (e) => setPurpose(e.target.value);
     const handlePrice = (value) => setPrice(value);
     const handleStorage = (e) => setStorage(e.target.value);
+    const handleRam = (e) => setRam(e.target.value);
     const handleCPU = (e) => setCPUBrand(e.target.value);
     const handleGPU = (e) => setGPUBrand(e.target.value);
     const handleOS = (e) => setIncludeOS(e.target.checked);
@@ -63,7 +81,7 @@ function Homepage() {
                     </Row>
                 </div>
 
-                <div className="selection-content">
+                <div className="selection-content" ref={filterTabRef}>
                     <div style={{
                         display: 'flex',
                         displayDirection: 'row',
@@ -103,81 +121,101 @@ function Homepage() {
                         </div>
                     </div>
 
+                    <Button
+                        style={{ margin: '1rem', color: 'white' }}
+                        onClick={handleFilter}
+                        color='default'
+                        variant='link'
+                    >
+                        Filter {!filterOpened ? '⇊' : '⇈'}
+                    </Button>
 
-                    <div style={{
-                        display: 'flex',
-                        displayDirection: 'row',
-                        marginBottom: '1rem'
-                    }}>
+                    {filterOpened ? (
+                        <div style={{
+                            display: 'flex',
+                            displayDirection: 'row',
+                            marginBottom: '1rem'
+                        }}>
 
-                        <div className="content-box">
-                            <p>CPU Brand Preference</p>
-                            <hr />
-                            <Radio.Group onChange={handleCPU} value={cpuBrand}>
-                                <Space direction="vertical">
-                                    <Radio value={'Intel'}>Intel</Radio>
-                                    <Radio value={'AMD'}>AMD</Radio>
-                                    <Radio value={'Either'}>Either</Radio>
+                            <div className="content-box">
+                                <p>CPU Brand Preference</p>
+                                <hr />
+                                <Radio.Group onChange={handleCPU} value={cpuBrand}>
+                                    <Space direction="vertical">
+                                        <Radio value={'Intel'}>Intel</Radio>
+                                        <Radio value={'AMD'}>AMD</Radio>
+                                        <Radio value={'Either'}>Either</Radio>
+                                    </Space>
+                                </Radio.Group>
+
+
+                            </div>
+
+                            <div className="content-box">
+                                <p>GPU Brand Preference</p>
+                                <hr />
+                                <Radio.Group onChange={handleGPU} value={gpuBrand}>
+                                    <Space direction="vertical">
+                                        <Radio value={'Nvidia'}>Nvidia</Radio>
+                                        <Radio value={'AMD'}>AMD</Radio>
+                                        <Radio value={'Intel'}>Intel</Radio>
+                                        <Radio value={'Either'}>Either</Radio>
+                                    </Space>
+                                </Radio.Group>
+                            </div>
+
+                            <div className="content-box">
+                                <p>Ram</p>
+                                <hr />
+                                <Radio.Group onChange={handleRam} value={ram}>
+                                    <Space direction="vertical">
+                                        <Radio value={'8'}>8GB</Radio>
+                                        <Radio value={'16'}>16GB</Radio>
+                                        <Radio value={'32'}>32GB</Radio>
+                                        <Radio value={'64'}>64GB</Radio>
+                                    </Space>
+
+
+                                </Radio.Group>
+
+                                <Space direction="vertical" style={{ marginTop: '5rem' }}>
+                                    <Radio.Group
+                                        block
+                                        options={ramOptions}
+                                        defaultValue="either"
+                                        optionType="button"
+                                        buttonStyle="solid"
+                                    />
                                 </Space>
-                            </Radio.Group>
+                            </div>
+                            <div className="content-box">
+                                <p>Storage</p>
+                                <hr />
+                                <Radio.Group onChange={handleStorage} value={storage}>
+                                    <Space direction="vertical">
+                                        <Radio value={'250'}>250GB</Radio>
+                                        <Radio value={'500'}>500GB</Radio>
+                                        <Radio value={'1000'}>1TB</Radio>
+                                        <Radio value={'2000'}>2TB+</Radio>
+                                    </Space>
+                                </Radio.Group>
+                            </div>
 
-
+                            <div className="content-box">
+                                <p>Other Preferences</p>
+                                <hr />
+                                <Checkbox onChange={handleOS}>Windows 11 (+119.99$)</Checkbox>
+                                <Checkbox onChange={handleCaseType}>Micro ATX Case</Checkbox>
+                            </div>
                         </div>
+                    ) : (
+                        <></>
+                    )}
 
-                        <div className="content-box">
-                            <p>GPU Brand Preference</p>
-                            <hr />
-                            <Radio.Group onChange={handleGPU} value={gpuBrand}>
-                                <Space direction="vertical">
-                                    <Radio value={'Nvidia'}>Nvidia</Radio>
-                                    <Radio value={'AMD'}>AMD</Radio>
-                                    <Radio value={'Intel'}>Intel</Radio>
-                                    <Radio value={'Either'}>Either</Radio>
-                                </Space>
-                            </Radio.Group>
-                        </div>
-
-                        <div className="content-box">
-                            <p>Ram</p>
-                            <hr />
-                            <Radio.Group onChange={handleStorage} value={storage}>
-                                <Space direction="vertical">
-                                    <Radio value={'8'}>8GB</Radio>
-                                    <Radio value={'16'}>16GB</Radio>
-                                    <Radio value={'32'}>32GB</Radio>
-                                    <Radio value={'64'}>64GB</Radio>
-                                </Space>
-                            </Radio.Group>
-                        </div>
-                        <div className="content-box">
-                            <p>Storage</p>
-                            <hr />
-                            <Radio.Group onChange={handleStorage} value={storage}>
-                                <Space direction="vertical">
-                                    <Radio value={'250'}>250GB</Radio>
-                                    <Radio value={'500'}>500GB</Radio>
-                                    <Radio value={'1000'}>1TB</Radio>
-                                    <Radio value={'2000'}>2TB+</Radio>
-                                </Space>
-                            </Radio.Group>
-                        </div>
-
-
-
-
-                        <div className="content-box">
-                            <p>Other Preferences</p>
-                            <hr />
-                            <Checkbox onChange={handleOS}>Windows 11 (+119.99$)</Checkbox>
-                            <Checkbox onChange={handleCaseType}>Micro ATX Case</Checkbox>
-                        </div>
-                    </div>
-
-
-
-
-
-                    <Button onClick={handleConfigure} style={{ margin: '3rem' }}>
+                    <Button
+                        style={{ margin: '3rem' }}
+                        onClick={handleConfigure}
+                    >
                         Configure
                     </Button>
 
