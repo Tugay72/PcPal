@@ -17,6 +17,7 @@ function Homepage() {
     const [dataSource, setDataSource] = useState([]);
     const [includeOS, setIncludeOS] = useState(false);
     const [microATX, setMicroATX] = useState(false);
+    const [sidePanel, setSidePanel] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const tableRef = useRef(null);
@@ -65,6 +66,7 @@ function Homepage() {
     const handleGPU = (e) => setGPUBrand(e.target.value);
     const handleOS = (e) => setIncludeOS(e.target.checked);
     const handleCaseType = (e) => setMicroATX(e.target.checked);
+    const handleSidePanel = (e) => setSidePanel(e.target.checked);
 
     return (
         <div className="Homepage">
@@ -95,7 +97,7 @@ function Homepage() {
                                     <Radio value={'Work'}>Work</Radio>
                                     <Radio value={'School'}>School</Radio>
                                     <Radio value={'Gaming'}>Gaming</Radio>
-                                    <Radio value={'Engineer'}>Engineer</Radio>
+                                    <Radio value={'Engineer'}>Engineer / Architecture</Radio>
                                     <Radio value={'Just Google'}>Just Google</Radio>
                                 </Space>
                             </Radio.Group>
@@ -105,14 +107,14 @@ function Homepage() {
                             <p>Budget ($)</p>
                             <hr />
                             <Slider
-                                min={300}
+                                min={500}
                                 max={5000}
                                 onChange={handlePrice}
                                 value={typeof price === 'number' ? price : 0}
                             />
 
                             <InputNumber
-                                min={300}
+                                min={500}
                                 max={5000}
                                 style={{ margin: '0 16px' }}
                                 value={price}
@@ -206,6 +208,7 @@ function Homepage() {
                                 <hr />
                                 <Checkbox onChange={handleOS}>Windows 11 (+119.99$)</Checkbox>
                                 <Checkbox onChange={handleCaseType}>Micro ATX Case</Checkbox>
+                                <Checkbox onChange={handleSidePanel}>Side: Tempered Glass</Checkbox>
                             </div>
                         </div>
                     ) : (

@@ -20,11 +20,12 @@ const findOneByCondition = (data, condition, fileName, storage, cpuBrand, gpuBra
         var foundIndex = data.findIndex((item) => item.price <= condition && item.price >= i);
         if (foundIndex !== -1) {
             var foundPart = data[foundIndex];
+            console.log(foundPart)
 
             //FIX: Finding 250GB is not working well!
             if (fileName == 'internal-hard-drive') {
                 var numericStorage = parseInt(storage);
-                if (foundPart.capacity <= (numericStorage + 50) && foundPart.capacity >= (numericStorage - 100)) {
+                if (foundPart.capacity <= (numericStorage + 50)) {
                     return foundPart;
                 }
                 else {
@@ -95,7 +96,7 @@ const findOneByCondition = (data, condition, fileName, storage, cpuBrand, gpuBra
     }
     console.log('No Match!');
     foundPart = data.find((item) => item.price <= 100);
-    return foundPart
+    return foundPart;
 
 };
 
