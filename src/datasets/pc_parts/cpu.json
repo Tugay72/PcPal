@@ -6,8 +6,11 @@
     "core_clock": 4.3,
     "boost_clock": 5.7,
     "tdp": 170,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 7,
+    "gaming_rank": 5
   },
   {
     "name": "AMD Ryzen 9 9900X",
@@ -16,8 +19,11 @@
     "core_clock": 4.4,
     "boost_clock": 5.6,
     "tdp": 120,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 12,
+    "gaming_rank": 8
   },
   {
     "name": "AMD Ryzen 9 7950X3D",
@@ -26,8 +32,11 @@
     "core_clock": 4.2,
     "boost_clock": 5.7,
     "tdp": 120,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 11,
+    "gaming_rank": 3
   },
   {
     "name": "AMD Ryzen 9 7900X3D",
@@ -36,8 +45,11 @@
     "core_clock": 4.4,
     "boost_clock": 5.6,
     "tdp": 120,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 17,
+    "gaming_rank": 10
   },
   {
     "name": "AMD Ryzen 9 7950X",
@@ -46,8 +58,11 @@
     "core_clock": 4.5,
     "boost_clock": 5.7,
     "tdp": 170,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 8,
+    "gaming_rank": 9
   },
   {
     "name": "AMD Ryzen 9 7900X",
@@ -56,8 +71,11 @@
     "core_clock": 4.7,
     "boost_clock": 5.6,
     "tdp": 170,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 16,
+    "gaming_rank": 12
   },
   {
     "name": "AMD Ryzen 7 7700X",
@@ -66,8 +84,11 @@
     "core_clock": 4.5,
     "boost_clock": 5.4,
     "tdp": 105,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 24,
+    "gaming_rank": 13
   },
   {
     "name": "AMD Ryzen 5 7600X",
@@ -76,8 +97,11 @@
     "core_clock": 4.7,
     "boost_clock": 5.3,
     "tdp": 105,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 26,
+    "gaming_rank": 15
   },
   {
     "name": "AMD Ryzen 7 9800X3D",
@@ -86,18 +110,24 @@
     "core_clock": 4.7,
     "boost_clock": 5.2,
     "tdp": 120,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 22,
+    "gaming_rank": 1
   },
   {
     "name": "AMD Ryzen 7 7800X3D",
     "price": 349.99,
     "core_count": 8,
     "core_clock": 4.2,
-    "boost_clock": 5.0,
+    "boost_clock": 5,
     "tdp": 120,
+    "socket": "AM5",
     "graphics": "RDNA 2",
-    "smt": true
+    "smt": true,
+    "overall_rank": 23,
+    "gaming_rank": 2
   },
   {
     "name": "Intel Core Ultra 9 285K",
@@ -106,8 +136,11 @@
     "core_clock": 3.4,
     "boost_clock": 5.8,
     "tdp": 125,
+    "socket": "LGA 1851",
     "graphics": "Intel UHD Graphics 800",
-    "smt": false
+    "smt": false,
+    "overall_rank": 10,
+    "gaming_rank": 6
   },
   {
     "name": "Intel Core Ultra 5 265KF",
@@ -116,8 +149,11 @@
     "core_clock": 3.3,
     "boost_clock": 5.5,
     "tdp": 125,
+    "socket": "LGA 1851",
     "graphics": null,
-    "smt": false
+    "smt": false,
+    "overall_rank": 15,
+    "gaming_rank": 14
   },
   {
     "name": "Intel Core Ultra 5 245KF",
@@ -126,18 +162,24 @@
     "core_clock": 3.6,
     "boost_clock": 5.2,
     "tdp": 125,
+    "socket": "LGA 1851",
     "graphics": null,
-    "smt": false
+    "smt": false,
+    "overall_rank": 21,
+    "gaming_rank": 16
   },
   {
     "name": "Intel Core i9-14900K",
     "price": 589.99,
     "core_count": 24,
     "core_clock": 3.2,
-    "boost_clock": 6.0,
+    "boost_clock": 6,
     "tdp": 125,
+    "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
-    "smt": true
+    "smt": true,
+    "overall_rank": 9,
+    "gaming_rank": 4
   },
   {
     "name": "Intel Core i7-14700K",
@@ -146,8 +188,11 @@
     "core_clock": 3.4,
     "boost_clock": 5.6,
     "tdp": 125,
+    "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
-    "smt": true
+    "smt": true,
+    "overall_rank": 14,
+    "gaming_rank": 11
   },
   {
     "name": "Intel Core i5-14600K",
@@ -156,18 +201,24 @@
     "core_clock": 3.5,
     "boost_clock": 5.3,
     "tdp": 125,
+    "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
-    "smt": true
+    "smt": true,
+    "overall_rank": 19,
+    "gaming_rank": 13
   },
-    {
+  {
     "name": "Intel Core i9-13900K",
     "price": 589.99,
     "core_count": 24,
-    "core_clock": 3.0,
+    "core_clock": 3,
     "boost_clock": 5.8,
     "tdp": 125,
+    "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
-    "smt": true
+    "smt": true,
+    "overall_rank": 11,
+    "gaming_rank": 7
   },
   {
     "name": "Intel Core i7-13700K",
@@ -176,8 +227,11 @@
     "core_clock": 3.4,
     "boost_clock": 5.4,
     "tdp": 125,
+    "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
-    "smt": true
+    "smt": true,
+    "overall_rank": 18,
+    "gaming_rank": 13
   },
   {
     "name": "Intel Core i5-13600K",
@@ -186,8 +240,11 @@
     "core_clock": 3.5,
     "boost_clock": 5.1,
     "tdp": 125,
+    "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
-    "smt": true
+    "smt": true,
+    "overall_rank": 20,
+    "gaming_rank": 14
   },
   {
     "name": "Intel Core i5-13400",
@@ -196,18 +253,11 @@
     "core_clock": 2.5,
     "boost_clock": 4.6,
     "tdp": 65,
+    "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 730",
-    "smt": true
-  },
-  {
-    "name": "Intel Core i3-12100",
-    "price": 119.99,
-    "core_count": 4,
-    "core_clock": 3.3,
-    "boost_clock": 4.3,
-    "tdp": 60,
-    "graphics": "Intel UHD Graphics 730",
-    "smt": true
+    "smt": true,
+    "overall_rank": 25,
+    "gaming_rank": 17
   },
   {
     "name": "AMD EPYC 9654",
@@ -216,8 +266,11 @@
     "core_clock": 2.25,
     "boost_clock": 3.7,
     "tdp": 360,
+    "socket": "SP5",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 1,
+    "gaming_rank": null
   },
   {
     "name": "AMD EPYC 9354",
@@ -226,18 +279,24 @@
     "core_clock": 3.25,
     "boost_clock": 3.8,
     "tdp": 280,
+    "socket": "SP5",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 5,
+    "gaming_rank": null
   },
   {
     "name": "Intel Xeon Platinum 8480+",
     "price": 10710.99,
     "core_count": 56,
-    "core_clock": 2.0,
+    "core_clock": 2,
     "boost_clock": 3.8,
     "tdp": 350,
+    "socket": "LGA 4677",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 3,
+    "gaming_rank": null
   },
   {
     "name": "Intel Xeon Gold 6430",
@@ -246,8 +305,11 @@
     "core_clock": 2.1,
     "boost_clock": 3.4,
     "tdp": 270,
+    "socket": "LGA 4677",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 6,
+    "gaming_rank": null
   },
   {
     "name": "AMD Ryzen Threadripper PRO 5995WX",
@@ -256,8 +318,11 @@
     "core_clock": 2.7,
     "boost_clock": 4.5,
     "tdp": 280,
+    "socket": "sWRX8",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 2,
+    "gaming_rank": null
   },
   {
     "name": "AMD Ryzen Threadripper PRO 5975WX",
@@ -266,8 +331,11 @@
     "core_clock": 3.6,
     "boost_clock": 4.5,
     "tdp": 280,
+    "socket": "sWRX8",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 4,
+    "gaming_rank": null
   },
   {
     "name": "AMD Ryzen 5 5500",
@@ -276,18 +344,24 @@
     "core_clock": 3.6,
     "boost_clock": 4.2,
     "tdp": 65,
+    "socket": "AM4",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 28,
+    "gaming_rank": 19
   },
   {
     "name": "AMD Ryzen 5 7500F",
     "price": 179.99,
     "core_count": 6,
     "core_clock": 3.7,
-    "boost_clock": 5.0,
+    "boost_clock": 5,
     "tdp": 65,
+    "socket": "AM5",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 27,
+    "gaming_rank": 16
   },
   {
     "name": "Intel Core i3-12100F",
@@ -296,8 +370,11 @@
     "core_clock": 3.3,
     "boost_clock": 4.3,
     "tdp": 58,
+    "socket": "LGA 1700",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 31,
+    "gaming_rank": 20
   },
   {
     "name": "Intel Core i3-13100F",
@@ -306,8 +383,11 @@
     "core_clock": 3.4,
     "boost_clock": 4.5,
     "tdp": 58,
+    "socket": "LGA 1700",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 30,
+    "gaming_rank": 19
   },
   {
     "name": "Intel Core i3-14100F",
@@ -316,8 +396,11 @@
     "core_clock": 3.5,
     "boost_clock": 4.7,
     "tdp": 58,
+    "socket": "LGA 1700",
     "graphics": null,
-    "smt": true
+    "smt": true,
+    "overall_rank": 29,
+    "gaming_rank": 18
   },
   {
     "name": "Intel Processor 300",
@@ -326,8 +409,10 @@
     "core_clock": 3.9,
     "boost_clock": 3.9,
     "tdp": 46,
+    "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 710",
-    "smt": true
+    "smt": true,
+    "overall_rank": 32,
+    "gaming_rank": 21
   }
-
 ]

@@ -1,11 +1,13 @@
 [
-    {
+  {
     "name": "Biostar A320MH",
     "price": 54.99,
     "socket": "AM4",
     "form_factor": "Micro-ATX",
     "max_memory": 64,
-    "memory_slots": 2
+    "memory_slots": 2,
+    "overall_rank": 24,
+    "cpu_type": "AMD"
   },
   {
     "name": "ASRock H610M-HDV/M.2 D4",
@@ -13,7 +15,9 @@
     "socket": "LGA 1700",
     "form_factor": "Micro-ATX",
     "max_memory": 64,
-    "memory_slots": 2
+    "memory_slots": 2,
+    "overall_rank": 22,
+    "cpu_type": "Intel"
   },
   {
     "name": "Gigabyte A520M K V2",
@@ -21,7 +25,9 @@
     "socket": "AM4",
     "form_factor": "Micro-ATX",
     "max_memory": 64,
-    "memory_slots": 2
+    "memory_slots": 2,
+    "overall_rank": 23,
+    "cpu_type": "AMD"
   },
   {
     "name": "ASRock B550M-HDV",
@@ -29,7 +35,9 @@
     "socket": "AM4",
     "form_factor": "Micro-ATX",
     "max_memory": 64,
-    "memory_slots": 2
+    "memory_slots": 2,
+    "overall_rank": 21,
+    "cpu_type": "AMD"
   },
   {
     "name": "Gigabyte B760M DS3H DDR4",
@@ -37,7 +45,9 @@
     "socket": "LGA 1700",
     "form_factor": "Micro-ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 20,
+    "cpu_type": "Intel"
   },
   {
     "name": "ASRock B860M-HDV/M.2",
@@ -45,7 +55,9 @@
     "socket": "LGA 1851",
     "form_factor": "Micro-ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 15,
+    "cpu_type": "Intel"
   },
   {
     "name": "MSI PRO H810M-G",
@@ -53,7 +65,9 @@
     "socket": "LGA 1851",
     "form_factor": "Micro-ATX",
     "max_memory": 96,
-    "memory_slots": 2
+    "memory_slots": 2,
+    "overall_rank": 17,
+    "cpu_type": "Intel"
   },
   {
     "name": "Gigabyte B860M D2H",
@@ -61,7 +75,9 @@
     "socket": "LGA 1851",
     "form_factor": "Micro-ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 14,
+    "cpu_type": "Intel"
   },
   {
     "name": "ASRock A620M-HDV/M.2+",
@@ -69,7 +85,9 @@
     "socket": "AM5",
     "form_factor": "Micro-ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 19,
+    "cpu_type": "AMD"
   },
   {
     "name": "Gigabyte A620M GAMING X",
@@ -77,7 +95,9 @@
     "socket": "AM5",
     "form_factor": "Micro-ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 18,
+    "cpu_type": "AMD"
   },
   {
     "name": "MSI PRO B650M-P",
@@ -85,7 +105,9 @@
     "socket": "AM5",
     "form_factor": "Micro-ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 16,
+    "cpu_type": "AMD"
   },
   {
     "name": "ASRock B650M PG Riptide WiFi",
@@ -93,7 +115,9 @@
     "socket": "AM5",
     "form_factor": "Micro-ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 13,
+    "cpu_type": "AMD"
   },
   {
     "name": "MSI PRO B760-P WIFI DDR4",
@@ -101,15 +125,19 @@
     "socket": "LGA 1700",
     "form_factor": "ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 12,
+    "cpu_type": "Intel"
   },
-    {
+  {
     "name": "MSI MAG B550 TOMAHAWK",
     "price": 169.99,
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 11,
+    "cpu_type": "AMD"
   },
   {
     "name": "Gigabyte B650 AORUS ELITE AX",
@@ -117,7 +145,9 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 10,
+    "cpu_type": "AMD"
   },
   {
     "name": "ASUS TUF GAMING Z790-PLUS WIFI D4",
@@ -125,7 +155,9 @@
     "socket": "LGA 1700",
     "form_factor": "ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 8,
+    "cpu_type": "Intel"
   },
   {
     "name": "MSI MAG X670E TOMAHAWK WIFI",
@@ -133,7 +165,9 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 7,
+    "cpu_type": "AMD"
   },
   {
     "name": "ASUS ROG STRIX B650E-F GAMING WIFI",
@@ -141,7 +175,9 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 6,
+    "cpu_type": "AMD"
   },
   {
     "name": "MSI MPG Z790 CARBON WIFI",
@@ -149,7 +185,9 @@
     "socket": "LGA 1700",
     "form_factor": "ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 5,
+    "cpu_type": "Intel"
   },
   {
     "name": "Gigabyte Z890 AORUS ELITE AX (Core Ultra Desktop)",
@@ -157,7 +195,9 @@
     "socket": "LGA 1851",
     "form_factor": "ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 4,
+    "cpu_type": "Intel"
   },
   {
     "name": "ASUS ROG CROSSHAIR X670E HERO",
@@ -165,7 +205,9 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 128,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 3,
+    "cpu_type": "AMD"
   },
   {
     "name": "MSI MEG Z790 ACE",
@@ -173,7 +215,9 @@
     "socket": "LGA 1700",
     "form_factor": "E-ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 2,
+    "cpu_type": "Intel"
   },
   {
     "name": "Gigabyte Z790 AORUS XTREME X",
@@ -181,6 +225,8 @@
     "socket": "LGA 1700",
     "form_factor": "E-ATX",
     "max_memory": 192,
-    "memory_slots": 4
+    "memory_slots": 4,
+    "overall_rank": 1,
+    "cpu_type": "Intel"
   }
 ]

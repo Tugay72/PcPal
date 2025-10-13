@@ -1,12 +1,13 @@
 [
-    {
+  {
     "name": "DeepCool PK550D",
     "price": 54.99,
     "type": "ATX",
     "efficiency": "bronze",
     "wattage": 550,
     "modular": "None",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 13
   },
   {
     "name": "Thermaltake Smart 500W",
@@ -15,7 +16,8 @@
     "efficiency": "white",
     "wattage": 500,
     "modular": "None",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 15
   },
   {
     "name": "SeaSonic S12III 500",
@@ -24,7 +26,8 @@
     "efficiency": "bronze",
     "wattage": 500,
     "modular": "None",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 12
   },
   {
     "name": "EVGA 500 W1",
@@ -33,7 +36,8 @@
     "efficiency": "white",
     "wattage": 500,
     "modular": "None",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 14
   },
   {
     "name": "Cooler Master MWE 650 Bronze V2",
@@ -42,7 +46,8 @@
     "efficiency": "bronze",
     "wattage": 650,
     "modular": "None",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 11
   },
   {
     "name": "Corsair CX650M (2021)",
@@ -51,7 +56,8 @@
     "efficiency": "bronze",
     "wattage": 650,
     "modular": "Semi",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 10
   },
   {
     "name": "Corsair RM750e (2023)",
@@ -60,7 +66,8 @@
     "efficiency": "gold",
     "wattage": 750,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 9
   },
   {
     "name": "SeaSonic FOCUS Plus Gold 750W",
@@ -69,7 +76,8 @@
     "efficiency": "gold",
     "wattage": 750,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 8
   },
   {
     "name": "MSI MPG A850G PCIE5",
@@ -78,7 +86,8 @@
     "efficiency": "gold",
     "wattage": 850,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 6
   },
   {
     "name": "be quiet! Pure Power 12 M 850W",
@@ -87,7 +96,8 @@
     "efficiency": "gold",
     "wattage": 850,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 5
   },
   {
     "name": "Corsair RM1000x SHIFT",
@@ -96,7 +106,8 @@
     "efficiency": "gold",
     "wattage": 1000,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 4
   },
   {
     "name": "Thermaltake Toughpower GF3 1000W",
@@ -105,7 +116,8 @@
     "efficiency": "gold",
     "wattage": 1000,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 3
   },
   {
     "name": "be quiet! Straight Power 12 1200W",
@@ -114,7 +126,8 @@
     "efficiency": "platinum",
     "wattage": 1200,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 1
   },
   {
     "name": "Corsair SF750",
@@ -123,7 +136,8 @@
     "efficiency": "platinum",
     "wattage": 750,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 2
   },
   {
     "name": "Cooler Master V850 SFX Gold",
@@ -132,6 +146,7 @@
     "efficiency": "gold",
     "wattage": 850,
     "modular": "Full",
-    "color": "Black"
+    "color": "Black",
+    "overall_rank": 7
   }
 ]

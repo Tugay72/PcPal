@@ -7,7 +7,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 15
   },
   {
     "name": "Thermaltake Versa H18",
@@ -17,7 +18,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 18
   },
   {
     "name": "Zalman S2",
@@ -27,7 +29,8 @@
     "psu": null,
     "side_panel": "Acrylic",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 19
   },
   {
     "name": "Cougar MX410 Mesh-G RGB",
@@ -37,7 +40,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 14
   },
   {
     "name": "Corsair 4000D Airflow",
@@ -47,7 +51,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 8
   },
   {
     "name": "Lian Li Lancool 216",
@@ -57,7 +62,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 7
   },
   {
     "name": "Fractal Design Pop Air",
@@ -67,7 +73,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 2,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 12
   },
   {
     "name": "NZXT H5 Flow",
@@ -77,7 +84,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 1
+    "internal_35_bays": 1,
+    "overall_rank": 10
   },
   {
     "name": "Hyte Y60",
@@ -87,7 +95,8 @@
     "psu": null,
     "side_panel": "Panoramic Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 2
   },
   {
     "name": "Lian Li O11 Dynamic EVO",
@@ -97,7 +106,8 @@
     "psu": null,
     "side_panel": "Dual Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 4
+    "internal_35_bays": 4,
+    "overall_rank": 4
   },
   {
     "name": "Montech AIR 100 ARGB",
@@ -107,7 +117,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 16
   },
   {
     "name": "Deepcool CH370",
@@ -117,7 +128,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 17
   },
   {
     "name": "Fractal Design Define 7 Compact Solid",
@@ -127,7 +139,8 @@
     "psu": null,
     "side_panel": "Sound-Dampened Steel",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 6
   },
   {
     "name": "be quiet! Silent Base 601",
@@ -137,7 +150,8 @@
     "psu": null,
     "side_panel": "Sound-Dampened Steel",
     "external_525_bays": 1,
-    "internal_35_bays": 3
+    "internal_35_bays": 3,
+    "overall_rank": 5
   },
   {
     "name": "Cooler Master MasterBox NR200P",
@@ -147,7 +161,8 @@
     "psu": null,
     "side_panel": "Vented Steel & Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 1
+    "internal_35_bays": 1,
+    "overall_rank": 13
   },
   {
     "name": "Corsair 7000D Airflow",
@@ -157,7 +172,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 6
+    "internal_35_bays": 6,
+    "overall_rank": 1
   },
   {
     "name": "Fractal Design Torrent",
@@ -167,7 +183,8 @@
     "psu": null,
     "side_panel": "Dark Tinted Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 3
   },
   {
     "name": "be quiet! Pure Base 500DX",
@@ -177,7 +194,8 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 9
   },
   {
     "name": "Phanteks Eclipse G360A",
@@ -187,6 +205,7 @@
     "psu": null,
     "side_panel": "Tempered Glass",
     "external_525_bays": 0,
-    "internal_35_bays": 2
+    "internal_35_bays": 2,
+    "overall_rank": 11
   }
 ]

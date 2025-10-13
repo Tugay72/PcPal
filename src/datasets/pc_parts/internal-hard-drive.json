@@ -1,12 +1,13 @@
 [
-    {
+  {
     "name": "Kingston NV2 250GB",
     "price": 29.99,
     "capacity": 250,
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 13
   },
   {
     "name": "Crucial P3 500GB",
@@ -15,7 +16,8 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 3.0 X4"
+    "interface": "M.2 PCIe 3.0 X4",
+    "overall_rank": 14
   },
   {
     "name": "Western Digital Blue SN580 500GB",
@@ -24,7 +26,8 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 12
   },
   {
     "name": "Samsung 970 Evo Plus 1TB",
@@ -33,7 +36,8 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 3.0 X4"
+    "interface": "M.2 PCIe 3.0 X4",
+    "overall_rank": 11
   },
   {
     "name": "Crucial P5 Plus 1TB",
@@ -42,7 +46,8 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 8
   },
   {
     "name": "Western Digital Black SN770 1TB",
@@ -51,7 +56,8 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 9
   },
   {
     "name": "Western Digital Black SN850X 1TB",
@@ -60,7 +66,8 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 5
   },
   {
     "name": "Samsung 990 Pro 1TB",
@@ -69,7 +76,8 @@
     "type": "SSD",
     "cache": 1024,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 6
   },
   {
     "name": "Crucial P5 Plus 2TB",
@@ -78,7 +86,8 @@
     "type": "SSD",
     "cache": 2048,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 7
   },
   {
     "name": "Samsung 990 Pro 2TB",
@@ -87,7 +96,8 @@
     "type": "SSD",
     "cache": 2048,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 4
   },
   {
     "name": "Crucial T700 2TB",
@@ -96,16 +106,18 @@
     "type": "SSD",
     "cache": 2048,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X4"
+    "interface": "M.2 PCIe 5.0 X4",
+    "overall_rank": 1
   },
-    {
+  {
     "name": "Gigabyte AORUS Gen5 12000 1TB",
     "price": 159.99,
     "capacity": 1000,
     "type": "SSD",
     "cache": 1024,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 5.0 X4"
+    "interface": "M.2 PCIe 5.0 X4",
+    "overall_rank": 2
   },
   {
     "name": "Crucial P3 Plus 4TB",
@@ -114,7 +126,8 @@
     "type": "SSD",
     "cache": null,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 10
   },
   {
     "name": "Western Digital Black SN850X 4TB",
@@ -123,6 +136,7 @@
     "type": "SSD",
     "cache": 4096,
     "form_factor": "M.2-2280",
-    "interface": "M.2 PCIe 4.0 X4"
+    "interface": "M.2 PCIe 4.0 X4",
+    "overall_rank": 3
   }
 ]
