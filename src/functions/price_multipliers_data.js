@@ -3,7 +3,7 @@ const componentData = {
         "0": {
             "cpu": {
                 "minPrice": 35,
-                "Work": 0.3,
+                "Work": 0.4,
                 "Engineer": 0.3,
                 "Gaming": 0.2,
                 "School": 0.2,
@@ -11,7 +11,7 @@ const componentData = {
             },
             "video-card": {
                 "minPrice": 50,
-                "Work": 0.2,
+                "Work": 0.1,
                 "Engineer": 0.3,
                 "Gaming": 0.3,
                 "School": 0.3,

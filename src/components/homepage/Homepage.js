@@ -11,7 +11,8 @@ function Homepage() {
     const [price, setPrice] = useState(500);
     const [purpose, setPurpose] = useState('Work');
     const [storage, setStorage] = useState('500');
-    const [ram, setRam] = useState('16');
+    const [ramStorage, setRamStorage] = useState('16');
+    const [ramType, setRamType] = useState('Either');
     const [cpuBrand, setCPUBrand] = useState('Either');
     const [gpuBrand, setGPUBrand] = useState('Either');
     const [dataSource, setDataSource] = useState([]);
@@ -26,9 +27,9 @@ function Homepage() {
     const [filterOpened, setFilterOpened] = useState(false);
 
     const ramOptions = [
-        { label: 'DDR4', value: 'ddr4' },
-        { label: 'DDR5', value: 'ddr5' },
-        { label: 'Either', value: 'either' },
+        { label: 'DDR4', value: 'DDR4' },
+        { label: 'DDR5', value: 'DDR5' },
+        { label: 'Either', value: 'Either' },
     ];
 
     //Scroll effect after pressing configure button
@@ -42,7 +43,7 @@ function Homepage() {
         setLoading(true);
         try {
             setTotalBuilds((prevTotalBuilds) => prevTotalBuilds + 1);
-            const data = await findPcPart(price, purpose, storage, cpuBrand, gpuBrand, includeOS, microATX);
+            const data = await findPcPart(price, purpose, storage, cpuBrand, gpuBrand, ramType, ramStorage, includeOS, microATX);
             setDataSource(data);
         } catch (error) {
             console.error('Error fetching PC parts:', error);
@@ -61,7 +62,8 @@ function Homepage() {
     const handlePurpose = (e) => setPurpose(e.target.value);
     const handlePrice = (value) => setPrice(value);
     const handleStorage = (e) => setStorage(e.target.value);
-    const handleRam = (e) => setRam(e.target.value);
+    const handleRamStorage = (e) => setRamStorage(e.target.value);
+    const handleRamType = (e) => setRamType(e.target.value);
     const handleCPU = (e) => setCPUBrand(e.target.value);
     const handleGPU = (e) => setGPUBrand(e.target.value);
     const handleOS = (e) => setIncludeOS(e.target.checked);
@@ -169,7 +171,7 @@ function Homepage() {
                             <div className="content-box">
                                 <p>Ram</p>
                                 <hr />
-                                <Radio.Group onChange={handleRam} value={ram}>
+                                <Radio.Group onChange={handleRamStorage} value={ramStorage}>
                                     <Space direction="vertical">
                                         <Radio value={'8'}>8GB</Radio>
                                         <Radio value={'16'}>16GB</Radio>
@@ -182,6 +184,8 @@ function Homepage() {
 
                                 <Space direction="vertical" style={{ marginTop: '5rem' }}>
                                     <Radio.Group
+                                        value={ramType}
+                                        onChange={handleRamType}
                                         block
                                         options={ramOptions}
                                         defaultValue="either"

@@ -7,6 +7,7 @@ const tableNames = ['CPU', 'GPU', 'Ram', 'Motherboard', 'Hard Drive', 'Case', 'P
 var data = [];
 var priceRange = 0;
 
+var selectedCPU = null;
 
 //Load datasets
 const loadJsonFile = (fileName) => {
@@ -14,9 +15,12 @@ const loadJsonFile = (fileName) => {
 };
 
 // Find one item by condition (for example: by price)
-const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBrand, gpuBrand, microATX) => {
+const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBrand, gpuBrand, ramType, ramStorage, microATX) => {
 
     let currentBudget = condition * 1.2;
+    if (currentBudget < 50) {
+        currentBudget = 50
+    }
     const priceDropStep = 25;
 
     while (currentBudget > 0) {
@@ -33,11 +37,25 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
                     if (cpuBrand !== 'Either' && !part.name.includes(cpuBrand)) {
                         return false;
                     }
+
+                    if (purpose !== 'Gaming' && purpose !== 'Engineer' && part.graphics == null) {
+                        return false;
+                    }
+
+                    if (ramType !== 'Either' && part.ram_type !== 'Either' && part.ram_type !== ramType) {
+                        return false;
+                    }
+
                     break;
 
                 case 'video-card':
-                    if (gpuBrand === 'Nvidia' && !part.chipset.includes('GeForce')) return false;
-                    if (gpuBrand === 'AMD' && !part.chipset.includes('Radeon')) return false;
+                    if (gpuBrand === 'Nvidia' && !part.chipset.includes('GeForce')) {
+                        return false;
+                    }
+                    if (gpuBrand === 'AMD' && !part.chipset.includes('Radeon')) {
+                        return false;
+                    }
+
                     break;
 
                 case 'motherboard':
@@ -46,6 +64,20 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
                     }
 
                     if (cpuBrand !== 'Either' && (cpuBrand !== part.cpu_type)) {
+                        return false;
+                    }
+
+                    if (selectedCPU !== null && selectedCPU.socket !== part.socket && selectedCPU.ram_type !== part.ram_type) {
+                        return false;
+                    }
+
+                    break;
+
+                case 'memory':
+                    if (ramType !== 'Either' && part.type !== ramType) {
+                        return false;
+                    }
+                    if (ramStorage != part.storage) {
                         return false;
                     }
 
@@ -58,8 +90,9 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
                     break;
 
                 case 'internal-hard-drive':
+
                     const requiredCapacity = parseInt(storage) || 0;
-                    if (part.capacity < requiredCapacity) {
+                    if (part.capacity < requiredCapacity || (part.capacity > requiredCapacity && requiredCapacity < 2000)) {
                         return false;
                     }
                     break;
@@ -81,6 +114,10 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
             });
 
             console.log(`Budget ${currentBudget.toFixed(2)} and found these parts : ${candidates[0].name}`);
+            if (candidates[0].gaming_rank !== undefined) {
+                selectedCPU = candidates[0];
+            }
+
             return candidates[0];
         }
 
@@ -88,23 +125,29 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
     }
 
     // 
-    console.log(`Nothing found.`);
-    return null;
+    console.log(`Nothing found. Budget was: `, condition);
+    return {
+        name: '---',
+        chipset: '---',
+        capacity: '---',
+        price: 0.00
+    };
 };
 
 // Set the price range and push the found item into the data array
-export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, includeOS, microATX, temperedGlass) => {
+export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, ramType, ramStorage, includeOS, microATX, temperedGlass) => {
     data = [];
     var index = 0;
+    selectedCPU = null;
     //var leftMoney = price
     for (let fileName of fileNames) {
         const fileData = await loadJsonFile(fileName);
 
         // Set the price scale for each part according to the total budget
-        if (price < 500) {
+        if (price <= 650) {
             priceRange = 0
         }
-        else if (price < 1000) {
+        else if (price < 1100) {
             priceRange = 1
         }
         else if (price < 2000) {
@@ -123,16 +166,16 @@ export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, in
         var priceMultiplier = compData[purpose];
         const calculatedPrice = Math.max(price * priceMultiplier, minPrice);
 
-        const foundItem = findOneByCondition(fileData.default, calculatedPrice, fileName, purpose, storage, cpuBrand, gpuBrand, microATX, temperedGlass);
+        const foundItem = findOneByCondition(fileData.default, calculatedPrice, fileName, purpose, storage, cpuBrand, gpuBrand, ramType, ramStorage, microATX, temperedGlass);
         if (foundItem) {
             // leftMoney -= foundItem.price
             let name;
 
             if (fileName == 'video-card') {
-                name = `${foundItem.name} ${foundItem.chipset}`;
+                name = `${foundItem.name}`;
             }
             else if (fileName == 'internal-hard-drive') {
-                name = `${foundItem.name} ${foundItem.capacity}GB`;
+                name = `${foundItem.name}`;
             }
             else {
                 name = foundItem.name
@@ -146,7 +189,6 @@ export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, in
                 price: foundItem.price,
             });
             index += 1;
-            console.log(index)
         }
     }
     // Add windows 11

@@ -2,109 +2,131 @@
   {
     "name": "Crucial Basics 8GB (2x4GB) 2666MHz",
     "price": 24.99,
-    "type": "ddr4",
+    "type": "DDR4",
     "speed": 2666,
     "modules": [2, 4],
     "cas_latency": 19,
-    "overall_rank": 12
+    "overall_rank": 13,
+    "storage": 8
   },
   {
     "name": "Corsair Vengeance LPX 16GB (2x8GB) 3200MHz",
     "price": 39.99,
-    "type": "ddr4",
+    "type": "DDR4",
     "speed": "3200",
     "modules": [2, 8],
     "cas_latency": 16,
-    "overall_rank": 10
+    "overall_rank": 11,
+    "storage": 16
   },
   {
     "name": "G.Skill Ripjaws V 16GB (2x8GB) 3600MHz",
     "price": 44.99,
-    "type": "ddr4",
+    "type": "DDR4",
     "speed": "3600",
     "modules": [2, 8],
     "cas_latency": 18,
-    "overall_rank": 9
+    "overall_rank": 10,
+    "storage": 16
   },
   {
     "name": "Kingston FURY Beast RGB 16GB (2x8GB) 3200MHz",
     "price": 49.99,
-    "type": "ddr4",
+    "type": "DDR4",
     "speed": "3200",
     "modules": [2, 8],
     "cas_latency": 16,
-    "overall_rank": 11
+    "overall_rank": 12,
+    "storage": 16
   },
   {
     "name": "TeamGroup T-Force Vulcan Z 32GB (2x16GB) 3200MHz",
     "price": 64.99,
-    "type": "ddr4",
+    "type": "DDR4",
     "speed": "3200",
     "modules": [2, 16],
     "cas_latency": 16,
-    "overall_rank": 8
+    "overall_rank": 9,
+    "storage": 32
   },
   {
     "name": "Corsair Vengeance RGB Pro 32GB (2x16GB) 3600MHz",
     "price": 89.99,
-    "type": "ddr4",
+    "type": "DDR4",
     "speed": "3600",
     "modules": [2, 16],
     "cas_latency": 18,
-    "overall_rank": 7
+    "overall_rank": 8,
+    "storage": 32
+  },
+  {
+  "name": "Corsair Vengeance LPX 64GB (2x32GB) 3200MHz",
+  "price": 139.99,
+  "type": "DDR4",
+  "speed": "3200",
+  "modules": [2, 32],
+  "cas_latency": 16,
+  "overall_rank": 6,
+  "memory_storage": 64
   },
   {
     "name": "Crucial Pro 16GB (2x8GB) 5200MHz",
     "price": 54.99,
-    "type": "ddr5",
+    "type": "DDR5",
     "speed": "5200",
     "modules": [2, 8],
     "cas_latency": 42,
-    "overall_rank": 6
+    "overall_rank": 7,
+    "storage": 16
   },
   {
     "name": "G.Skill Flare X5 32GB (2x16GB) 6000MHz (AMD EXPO)",
     "price": 99.99,
-    "type": "ddr5",
+    "type": "DDR5",
     "speed": "6000",
     "modules": [2, 16],
     "cas_latency": 30,
-    "overall_rank": 4
+    "overall_rank": 4,
+    "storage": 32
   },
   {
     "name": "Corsair Vengeance 32GB (2x16GB) 6000MHz (Intel XMP)",
     "price": 104.99,
-    "type": "ddr5",
+    "type": "DDR5",
     "speed": "6000",
     "modules": [2, 16],
     "cas_latency": 36,
-    "overall_rank": 5
+    "overall_rank": 5,
+    "storage": 32
   },
   {
     "name": "TeamGroup T-Force Delta RGB 32GB (2x16GB) 6400MHz",
     "price": 114.99,
-    "type": "ddr5",
+    "type": "DDR5",
     "speed": "6400",
     "modules": [2, 16],
     "cas_latency": 32,
-    "overall_rank": 3
+    "overall_rank": 3,
+    "storage": 32
   },
   {
     "name": "G.Skill Ripjaws S5 64GB (2x32GB) 5600MHz",
     "price": 189.99,
-    "type": "ddr5",
+    "type": "DDR5",
     "speed": "5600",
     "modules": [2, 32],
     "cas_latency": 36,
-    "overall_rank": 2
+    "overall_rank": 2,
+    "storage": 64
   },
   {
     "name": "Corsair Dominator Platinum RGB 64GB (2x32GB) 6200MHz",
     "price": 249.99,
-    "type": "ddr5",
+    "type": "DDR5",
     "speed": "6200",
     "modules": [2, 32],
     "cas_latency": 36,
-    "overall_rank": 1
+    "overall_rank": 1,
+    "storage": 64
   }
 ]

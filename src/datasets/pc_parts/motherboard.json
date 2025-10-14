@@ -7,7 +7,8 @@
     "max_memory": 64,
     "memory_slots": 2,
     "overall_rank": 24,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR4"
   },
   {
     "name": "ASRock H610M-HDV/M.2 D4",
@@ -17,7 +18,8 @@
     "max_memory": 64,
     "memory_slots": 2,
     "overall_rank": 22,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR4"
   },
   {
     "name": "Gigabyte A520M K V2",
@@ -27,7 +29,8 @@
     "max_memory": 64,
     "memory_slots": 2,
     "overall_rank": 23,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR4"
   },
   {
     "name": "ASRock B550M-HDV",
@@ -37,7 +40,8 @@
     "max_memory": 64,
     "memory_slots": 2,
     "overall_rank": 21,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR4"
   },
   {
     "name": "Gigabyte B760M DS3H DDR4",
@@ -47,7 +51,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 20,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR4"
   },
   {
     "name": "ASRock B860M-HDV/M.2",
@@ -57,7 +62,8 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 15,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR5"
   },
   {
     "name": "MSI PRO H810M-G",
@@ -67,7 +73,8 @@
     "max_memory": 96,
     "memory_slots": 2,
     "overall_rank": 17,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR5"
   },
   {
     "name": "Gigabyte B860M D2H",
@@ -77,7 +84,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 14,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR5"
   },
   {
     "name": "ASRock A620M-HDV/M.2+",
@@ -87,7 +95,8 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 19,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
   },
   {
     "name": "Gigabyte A620M GAMING X",
@@ -97,7 +106,8 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 18,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
   },
   {
     "name": "MSI PRO B650M-P",
@@ -107,7 +117,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 16,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
   },
   {
     "name": "ASRock B650M PG Riptide WiFi",
@@ -117,7 +128,8 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 13,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
   },
   {
     "name": "MSI PRO B760-P WIFI DDR4",
@@ -127,7 +139,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 12,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR4"
   },
   {
     "name": "MSI MAG B550 TOMAHAWK",
@@ -137,7 +150,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 11,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR4"
   },
   {
     "name": "Gigabyte B650 AORUS ELITE AX",
@@ -147,7 +161,8 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 10,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
   },
   {
     "name": "ASUS TUF GAMING Z790-PLUS WIFI D4",
@@ -157,7 +172,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 8,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR4"
   },
   {
     "name": "MSI MAG X670E TOMAHAWK WIFI",
@@ -167,7 +183,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 7,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
   },
   {
     "name": "ASUS ROG STRIX B650E-F GAMING WIFI",
@@ -177,7 +194,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 6,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
   },
   {
     "name": "MSI MPG Z790 CARBON WIFI",
@@ -187,7 +205,8 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 5,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR5"
   },
   {
     "name": "Gigabyte Z890 AORUS ELITE AX (Core Ultra Desktop)",
@@ -197,7 +216,8 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 4,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR5"
   },
   {
     "name": "ASUS ROG CROSSHAIR X670E HERO",
@@ -207,7 +227,8 @@
     "max_memory": 128,
     "memory_slots": 4,
     "overall_rank": 3,
-    "cpu_type": "AMD"
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
   },
   {
     "name": "MSI MEG Z790 ACE",
@@ -217,7 +238,8 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 2,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR5"
   },
   {
     "name": "Gigabyte Z790 AORUS XTREME X",
@@ -227,6 +249,7 @@
     "max_memory": 192,
     "memory_slots": 4,
     "overall_rank": 1,
-    "cpu_type": "Intel"
+    "cpu_type": "Intel",
+    "ram_type": "DDR5"
   }
 ]
