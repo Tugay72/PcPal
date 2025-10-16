@@ -3,9 +3,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    width: 100%;
 }
 
 .content {
+    width: 100%;
     color: aliceblue;
 }
 
@@ -35,7 +38,7 @@
 }
 
 .summary-table {
-    margin: 16rem 0 12rem 0;
+    margin: 16rem 16rem;
 }
 
 hr {
@@ -49,4 +52,18 @@ p {
 
 .ant-checkbox-wrapper {
     margin-bottom: 0.5rem;
+}
+
+.tree-expanded-row td {
+    background: #fffbe6;
+    font-weight: 600;
+}
+
+.tree-collapsed-row td {
+    background: #ffffff;
+}
+
+.ant-table-row-level-1 td {
+    padding-left: 24px !important;
+    color: rgb(100, 100, 100);
 }

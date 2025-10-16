@@ -3,19 +3,19 @@ const componentData = {
         "0": {
             "cpu": {
                 "minPrice": 35,
-                "Work": 0.4,
+                "Work": 0.5,
                 "Engineer": 0.3,
                 "Gaming": 0.2,
                 "School": 0.2,
-                "Just Google": 0.4
+                "Just Google": 0.5
             },
             "video-card": {
                 "minPrice": 50,
-                "Work": 0.1,
-                "Engineer": 0.3,
+                "Work": 0.0,
+                "Engineer": 0.2,
                 "Gaming": 0.3,
                 "School": 0.3,
-                "Just Google": 0.1
+                "Just Google": 0.0
             },
             "memory": {
                 "minPrice": 30,
@@ -27,27 +27,27 @@ const componentData = {
             },
             "motherboard": {
                 "minPrice": 70,
-                "Work": 0.1,
-                "Engineer": 0.1,
-                "Gaming": 0.1,
-                "School": 0.1,
-                "Just Google": 0.1
+                "Work": 0.15,
+                "Engineer": 0.15,
+                "Gaming": 0.15,
+                "School": 0.15,
+                "Just Google": 0.15
             },
             "power-supply": {
                 "minPrice": 30,
-                "Work": 0.1,
-                "Engineer": 0.1,
-                "Gaming": 0.1,
-                "School": 0.1,
-                "Just Google": 0.1
+                "Work": 0.075,
+                "Engineer": 0.075,
+                "Gaming": 0.075,
+                "School": 0.075,
+                "Just Google": 0.075
             },
             "case": {
                 "minPrice": 30,
-                "Work": 0.1,
-                "Engineer": 0.1,
-                "Gaming": 0.1,
-                "School": 0.1,
-                "Just Google": 0.1
+                "Work": 0.075,
+                "Engineer": 0.075,
+                "Gaming": 0.075,
+                "School": 0.075,
+                "Just Google": 0.075
             },
             "internal-hard-drive": {
                 "minPrice": 30,
@@ -61,11 +61,11 @@ const componentData = {
         "1": {
             "cpu": {
                 "minPrice": 35,
-                "Work": 0.3,
-                "Engineer": 0.3,
-                "Gaming": 0.2,
-                "School": 0.2,
-                "Just Google": 0.4
+                "Work": 0.35,
+                "Engineer": 0.35,
+                "Gaming": 0.25,
+                "School": 0.25,
+                "Just Google": 0.45
             },
             "video-card": {
                 "minPrice": 50,
@@ -101,11 +101,11 @@ const componentData = {
             },
             "case": {
                 "minPrice": 30,
-                "Work": 0.15,
-                "Engineer": 0.1,
-                "Gaming": 0.1,
-                "School": 0.1,
-                "Just Google": 0.1
+                "Work": 0.05,
+                "Engineer": 0.05,
+                "Gaming": 0.05,
+                "School": 0.05,
+                "Just Google": 0.05
             },
             "internal-hard-drive": {
                 "minPrice": 30,

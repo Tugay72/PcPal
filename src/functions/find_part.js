@@ -118,7 +118,7 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
                 selectedCPU = candidates[0];
             }
 
-            return candidates[0];
+            return [candidates[0], candidates.slice(1)];
         }
 
         currentBudget -= priceDropStep;
@@ -126,12 +126,12 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
 
     // 
     console.log(`Nothing found. Budget was: `, condition);
-    return {
+    return [{
         name: '---',
         chipset: '---',
         capacity: '---',
         price: 0.00
-    };
+    }];
 };
 
 // Set the price range and push the found item into the data array
@@ -147,7 +147,7 @@ export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, ra
         if (price <= 650) {
             priceRange = 0
         }
-        else if (price < 1100) {
+        else if (price < 1000) {
             priceRange = 1
         }
         else if (price < 2000) {
@@ -166,27 +166,35 @@ export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, ra
         var priceMultiplier = compData[purpose];
         const calculatedPrice = Math.max(price * priceMultiplier, minPrice);
 
-        const foundItem = findOneByCondition(fileData.default, calculatedPrice, fileName, purpose, storage, cpuBrand, gpuBrand, ramType, ramStorage, microATX, temperedGlass);
+        // foundItems = [candidate 0, other candidates], most suitable candidate and others
+        const foundItems = findOneByCondition(fileData.default, calculatedPrice, fileName, purpose, storage, cpuBrand, gpuBrand, ramType, ramStorage, microATX, temperedGlass);
+        const foundItem = foundItems[0]
+        console.log(foundItems)
         if (foundItem) {
-            // leftMoney -= foundItem.price
-            let name;
+            var children = null;
 
-            if (fileName == 'video-card') {
-                name = `${foundItem.name}`;
+            if (foundItems[1]) {
+                children = foundItems[1].map(item => ({
+                    key: `${fileName}-${item.name}`,
+                    part: tableNames[index],
+                    brand: item.name,
+                    price: item.price,
+
+                }));
             }
-            else if (fileName == 'internal-hard-drive') {
-                name = `${foundItem.name}`;
-            }
-            else {
-                name = foundItem.name
-            }
+
+
+
 
             //Push found parts into table
             data.push({
                 key: `${fileName}-${foundItem.name}`,
                 part: tableNames[index],
-                brand: name,
+                brand: foundItem.name,
                 price: foundItem.price,
+                children:
+                    children
+
             });
             index += 1;
         }
@@ -210,8 +218,9 @@ export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, ra
         key: 'Total',
         part: 'Total Price',
         brand: '',
-        price: totalPrice.toFixed(2) + '$'
+        price: totalPrice.toFixed(2) + '$',
     })
 
+    console.log(data);
     return data;
 };

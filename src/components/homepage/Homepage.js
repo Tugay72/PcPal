@@ -26,6 +26,8 @@ function Homepage() {
 
     const [filterOpened, setFilterOpened] = useState(false);
 
+    const [expandedKeys, setExpandedKeys] = useState([]);
+
     const ramOptions = [
         { label: 'DDR4', value: 'DDR4' },
         { label: 'DDR5', value: 'DDR5' },
@@ -229,7 +231,22 @@ function Homepage() {
                 </div>
 
                 <div className="summary-table" ref={tableRef}>
-                    <Table dataSource={dataSource} columns={columns}></Table>
+                    <Table dataSource={dataSource} columns={columns}
+                        expandable={{
+                            onExpand: (expanded, record) => {
+                                if (expanded) {
+                                    setExpandedKeys(prev => [...prev, record.key]);
+                                } else {
+                                    setExpandedKeys(prev => prev.filter(k => k !== record.key));
+                                }
+                            },
+                            expandedRowKeys: expandedKeys,
+                        }}
+                        rowClassName={(record) =>
+                            expandedKeys.includes(record.key)
+                                ? 'tree-expanded-row'
+                                : 'tree-collapsed-row'
+                        }></Table>
                 </div>
             </div>
 

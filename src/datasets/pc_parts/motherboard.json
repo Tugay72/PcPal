@@ -66,6 +66,17 @@
     "ram_type": "DDR5"
   },
   {
+    "name": "ASRock A620AM-X",
+    "price": 79.99,
+    "socket": "AM5",
+    "form_factor": "Micro-ATX",
+    "max_memory": 128,
+    "memory_slots": 2,
+    "overall_rank": 25,
+    "cpu_type": "AMD",
+    "ram_type": "DDR5"
+  },
+  {
     "name": "MSI PRO H810M-G",
     "price": 149.99,
     "socket": "LGA 1851",
