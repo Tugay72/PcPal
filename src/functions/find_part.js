@@ -25,7 +25,7 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
 
     while (currentBudget > 0) {
         // 1. Filter and find the best candidates
-        const candidates = data.filter(part => {
+        var candidates = data.filter(part => {
             // Fiyat kontrolü
             if (part.price > currentBudget) {
                 return false;
@@ -118,6 +118,8 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
             console.log(`Budget ${currentBudget.toFixed(2)} and found these parts : ${candidates[0].name}`);
             if (candidates[0].gaming_rank !== undefined) {
                 selectedCPU = candidates[0];
+
+                candidates = candidates.filter(item => item.socket == selectedCPU.socket)
             }
 
             return [candidates[0], candidates.slice(1)];
@@ -175,7 +177,7 @@ export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, ra
         var otherSuggestedParts = foundItems[1];
 
         // Get the best 3 suggestions
-        if (otherSuggestedParts !== undefined) {
+        if (otherSuggestedParts !== undefined && otherSuggestedParts.length > 3) {
             otherSuggestedParts = otherSuggestedParts.slice(0, 3);
         }
 
