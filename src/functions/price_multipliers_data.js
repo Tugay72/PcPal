@@ -3,15 +3,15 @@ const componentData = {
         "0": {
             "cpu": {
                 "minPrice": 35,
-                "Work": 0.5,
+                "Work": 0.4,
                 "Engineer": 0.3,
                 "Gaming": 0.2,
                 "School": 0.2,
-                "Just Google": 0.5
+                "Just Google": 0.4
             },
             "video-card": {
                 "minPrice": 50,
-                "Work": 0.0,
+                "Work": 0.05,
                 "Engineer": 0.2,
                 "Gaming": 0.3,
                 "School": 0.3,
@@ -35,19 +35,19 @@ const componentData = {
             },
             "power-supply": {
                 "minPrice": 30,
-                "Work": 0.075,
-                "Engineer": 0.075,
-                "Gaming": 0.075,
-                "School": 0.075,
-                "Just Google": 0.075
+                "Work": 0.1,
+                "Engineer": 0.1,
+                "Gaming": 0.1,
+                "School": 0.1,
+                "Just Google": 0.1
             },
             "case": {
                 "minPrice": 30,
-                "Work": 0.075,
-                "Engineer": 0.075,
-                "Gaming": 0.075,
-                "School": 0.075,
-                "Just Google": 0.075
+                "Work": 0.1,
+                "Engineer": 0.1,
+                "Gaming": 0.1,
+                "School": 0.1,
+                "Just Google": 0.1
             },
             "internal-hard-drive": {
                 "minPrice": 30,

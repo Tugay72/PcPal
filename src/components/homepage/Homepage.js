@@ -9,6 +9,7 @@ const fileNames = ['cpu', 'video-card', 'memory', 'motherboard', 'internal-hard-
 function Homepage() {
     const [totalBuilds, setTotalBuilds] = useState(Math.floor(Math.random() * (2000000 + 0 + 1)) + 1);
     const [price, setPrice] = useState(500);
+    const [infiniteBudget, setInfiniteBudget] = useState(false);
     const [purpose, setPurpose] = useState('Work');
     const [storage, setStorage] = useState('500');
     const [ramStorage, setRamStorage] = useState('16');
@@ -71,6 +72,32 @@ function Homepage() {
     const handleOS = (e) => setIncludeOS(e.target.checked);
     const handleCaseType = (e) => setMicroATX(e.target.checked);
     const handleSidePanel = (e) => setSidePanel(e.target.checked);
+    const handleInfiniteBudget = (e) => {
+        setInfiniteBudget(e.target.checked);
+
+        if (infiniteBudget == false) {
+            setPrice(1000000);
+            setCPUBrand('Either')
+            setGPUBrand('Either')
+            setRamType('DDR5');
+            setRamStorage('64')
+            setStorage('2000');
+            setIncludeOS(true);
+            setSidePanel(true);
+        }
+        else {
+            setPrice(1000);
+            setCPUBrand('Either')
+            setGPUBrand('Either')
+            setRamType('Either');
+            setRamStorage('16')
+            setStorage('500');
+            setIncludeOS(false);
+            setSidePanel(false);
+        }
+
+
+    }
 
     return (
         <div className="Homepage">
@@ -111,6 +138,8 @@ function Homepage() {
                             <p>Budget ($)</p>
                             <hr />
                             <Slider
+                                disabled={infiniteBudget}
+                                step={price > 2000 ? 50 : 5}
                                 min={500}
                                 max={5000}
                                 onChange={handlePrice}
@@ -118,12 +147,16 @@ function Homepage() {
                             />
 
                             <InputNumber
+                                disabled={infiniteBudget}
                                 min={500}
                                 max={5000}
                                 style={{ margin: '0 16px' }}
                                 value={price}
                                 onChange={handlePrice}
                             />
+                            <br /> <br />
+
+                            <Checkbox onChange={handleInfiniteBudget}>I dont have a budget</Checkbox>
                         </div>
                     </div>
 

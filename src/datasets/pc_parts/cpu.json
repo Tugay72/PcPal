@@ -1,89 +1,5 @@
 [
   {
-    "name": "AMD EPYC 9654",
-    "price": 11805.99,
-    "core_count": 96,
-    "core_clock": 2.25,
-    "boost_clock": 3.7,
-    "tdp": 360,
-    "socket": "SP5",
-    "graphics": null,
-    "smt": true,
-    "overall_rank": 1,
-    "gaming_rank": null,
-    "ram_type": "DDR5"
-  },
-  {
-    "name": "AMD Ryzen Threadripper PRO 5995WX",
-    "price": 6499.99,
-    "core_count": 64,
-    "core_clock": 2.7,
-    "boost_clock": 4.5,
-    "tdp": 280,
-    "socket": "sWRX8",
-    "graphics": null,
-    "smt": true,
-    "overall_rank": 2,
-    "gaming_rank": null,
-    "ram_type": "DDR4"
-  },
-  {
-    "name": "Intel Xeon Platinum 8480+",
-    "price": 10710.99,
-    "core_count": 56,
-    "core_clock": 2,
-    "boost_clock": 3.8,
-    "tdp": 350,
-    "socket": "LGA 4677",
-    "graphics": null,
-    "smt": true,
-    "overall_rank": 3,
-    "gaming_rank": null,
-    "ram_type": "DDR5"
-  },
-  {
-    "name": "AMD Ryzen Threadripper PRO 5975WX",
-    "price": 3299.99,
-    "core_count": 32,
-    "core_clock": 3.6,
-    "boost_clock": 4.5,
-    "tdp": 280,
-    "socket": "sWRX8",
-    "graphics": null,
-    "smt": true,
-    "overall_rank": 4,
-    "gaming_rank": null,
-    "ram_type": "DDR4"
-  },
-  {
-    "name": "AMD EPYC 9354",
-    "price": 4860.99,
-    "core_count": 32,
-    "core_clock": 3.25,
-    "boost_clock": 3.8,
-    "tdp": 280,
-    "socket": "SP5",
-    "graphics": null,
-    "smt": true,
-    "overall_rank": 5,
-    "gaming_rank": null,
-    "ram_type": "DDR5"
-  },
-  {
-    "name": "Intel Xeon Gold 6430",
-    "price": 2850.99,
-    "core_count": 32,
-    "core_clock": 2.1,
-    "boost_clock": 3.4,
-    "tdp": 270,
-    "socket": "LGA 4677",
-    "graphics": null,
-    "smt": true,
-    "overall_rank": 6,
-    "gaming_rank": null,
-    "ram_type": "DDR5"
-  },
-  {
     "name": "AMD Ryzen 9 9950X",
     "price": 649.99,
     "core_count": 16,
@@ -93,22 +9,8 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 7,
+    "overall_rank": 1,
     "gaming_rank": 5,
-    "ram_type": "DDR5"
-  },
-  {
-    "name": "AMD Ryzen 9 7950X",
-    "price": 699.99,
-    "core_count": 16,
-    "core_clock": 4.5,
-    "boost_clock": 5.7,
-    "tdp": 170,
-    "socket": "AM5",
-    "graphics": "RDNA 2",
-    "smt": true,
-    "overall_rank": 8,
-    "gaming_rank": 11,
     "ram_type": "DDR5"
   },
   {
@@ -121,8 +23,22 @@
     "socket": "LGA 1851",
     "graphics": "Intel UHD Graphics 800",
     "smt": false,
-    "overall_rank": 9,
+    "overall_rank": 2,
     "gaming_rank": 7,
+    "ram_type": "DDR5"
+  },
+  {
+    "name": "AMD Ryzen 9 7950X",
+    "price": 699.99,
+    "core_count": 16,
+    "core_clock": 4.5,
+    "boost_clock": 5.7,
+    "tdp": 170,
+    "socket": "AM5",
+    "graphics": "RDNA 2",
+    "smt": true,
+    "overall_rank": 3,
+    "gaming_rank": 11,
     "ram_type": "DDR5"
   },
   {
@@ -135,7 +51,7 @@
     "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
     "smt": true,
-    "overall_rank": 10,
+    "overall_rank": 4,
     "gaming_rank": 4,
     "ram_type": "Either"
   },
@@ -150,7 +66,7 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 11,
+    "overall_rank": 5,
     "gaming_rank": 3,
     "ram_type": "DDR5"
   },
@@ -164,7 +80,7 @@
     "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
     "smt": true,
-    "overall_rank": 12,
+    "overall_rank": 6,
     "gaming_rank": 8,
     "ram_type": "Either"
   },
@@ -178,23 +94,9 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 13,
+    "overall_rank": 7,
     "gaming_rank": 9,
     "ram_type": "DDR5"
-  },
-  {
-    "name": "AMD Ryzen 9 5950X",
-    "price": 379.99,
-    "core_count": 16,
-    "core_clock": 3.4,
-    "boost_clock": 4.9,
-    "tdp": 105,
-    "socket": "AM4",
-    "graphics": null,
-    "smt": true,
-    "overall_rank": 14,
-    "gaming_rank": 18,
-    "ram_type": "DDR4"
   },
   {
     "name": "Intel Core i7-14700K",
@@ -206,7 +108,7 @@
     "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
     "smt": true,
-    "overall_rank": 15,
+    "overall_rank": 8,
     "gaming_rank": 12,
     "ram_type": "Either"
   },
@@ -220,9 +122,23 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 16,
+    "overall_rank": 9,
     "gaming_rank": 14,
     "ram_type": "DDR5"
+  },
+  {
+    "name": "AMD Ryzen 9 5950X",
+    "price": 379.99,
+    "core_count": 16,
+    "core_clock": 3.4,
+    "boost_clock": 4.9,
+    "tdp": 105,
+    "socket": "AM4",
+    "graphics": null,
+    "smt": true,
+    "overall_rank": 10,
+    "gaming_rank": 18,
+    "ram_type": "DDR4"
   },
   {
     "name": "AMD Ryzen 9 5900X",
@@ -234,7 +150,7 @@
     "socket": "AM4",
     "graphics": null,
     "smt": true,
-    "overall_rank": 17,
+    "overall_rank": 11,
     "gaming_rank": 19,
     "ram_type": "DDR4"
   },
@@ -248,7 +164,7 @@
     "socket": "LGA 1851",
     "graphics": null,
     "smt": false,
-    "overall_rank": 18,
+    "overall_rank": 12,
     "gaming_rank": 16,
     "ram_type": "DDR5"
   },
@@ -262,7 +178,7 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 19,
+    "overall_rank": 13,
     "gaming_rank": 10,
     "ram_type": "DDR5"
   },
@@ -276,7 +192,7 @@
     "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
     "smt": true,
-    "overall_rank": 20,
+    "overall_rank": 14,
     "gaming_rank": 15,
     "ram_type": "Either"
   },
@@ -290,7 +206,7 @@
     "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
     "smt": true,
-    "overall_rank": 21,
+    "overall_rank": 15,
     "gaming_rank": 17,
     "ram_type": "Either"
   },
@@ -304,7 +220,7 @@
     "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 770",
     "smt": true,
-    "overall_rank": 22,
+    "overall_rank": 16,
     "gaming_rank": 20,
     "ram_type": "Either"
   },
@@ -318,7 +234,7 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 23,
+    "overall_rank": 17,
     "gaming_rank": 1,
     "ram_type": "DDR5"
   },
@@ -332,7 +248,7 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 24,
+    "overall_rank": 18,
     "gaming_rank": 2,
     "ram_type": "DDR5"
   },
@@ -346,7 +262,7 @@
     "socket": "AM4",
     "graphics": null,
     "smt": true,
-    "overall_rank": 25,
+    "overall_rank": 19,
     "gaming_rank": 6,
     "ram_type": "DDR4"
   },
@@ -360,7 +276,7 @@
     "socket": "LGA 1851",
     "graphics": null,
     "smt": false,
-    "overall_rank": 26,
+    "overall_rank": 20,
     "gaming_rank": 21,
     "ram_type": "DDR5"
   },
@@ -374,7 +290,7 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 27,
+    "overall_rank": 21,
     "gaming_rank": 13,
     "ram_type": "DDR5"
   },
@@ -388,7 +304,7 @@
     "socket": "AM5",
     "graphics": "RDNA 2",
     "smt": true,
-    "overall_rank": 28,
+    "overall_rank": 22,
     "gaming_rank": 22,
     "ram_type": "DDR5"
   },
@@ -402,7 +318,7 @@
     "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 730",
     "smt": true,
-    "overall_rank": 29,
+    "overall_rank": 23,
     "gaming_rank": 25,
     "ram_type": "Either"
   },
@@ -416,7 +332,7 @@
     "socket": "AM4",
     "graphics": null,
     "smt": true,
-    "overall_rank": 30,
+    "overall_rank": 24,
     "gaming_rank": 24,
     "ram_type": "DDR4"
   },
@@ -430,7 +346,7 @@
     "socket": "AM5",
     "graphics": null,
     "smt": true,
-    "overall_rank": 31,
+    "overall_rank": 25,
     "gaming_rank": 23,
     "ram_type": "DDR5"
   },
@@ -444,7 +360,7 @@
     "socket": "AM4",
     "graphics": null,
     "smt": true,
-    "overall_rank": 32,
+    "overall_rank": 26,
     "gaming_rank": 26,
     "ram_type": "DDR4"
   },
@@ -458,7 +374,7 @@
     "socket": "LGA 1700",
     "graphics": null,
     "smt": true,
-    "overall_rank": 33,
+    "overall_rank": 27,
     "gaming_rank": 27,
     "ram_type": "Either"
   },
@@ -472,7 +388,7 @@
     "socket": "LGA 1700",
     "graphics": null,
     "smt": true,
-    "overall_rank": 34,
+    "overall_rank": 28,
     "gaming_rank": 28,
     "ram_type": "Either"
   },
@@ -486,7 +402,7 @@
     "socket": "AM4",
     "graphics": null,
     "smt": true,
-    "overall_rank": 35,
+    "overall_rank": 29,
     "gaming_rank": 29,
     "ram_type": "DDR4"
   },
@@ -500,7 +416,7 @@
     "socket": "LGA 1700",
     "graphics": null,
     "smt": true,
-    "overall_rank": 36,
+    "overall_rank": 30,
     "gaming_rank": 30,
     "ram_type": "Either"
   },
@@ -514,7 +430,7 @@
     "socket": "LGA 1700",
     "graphics": "Intel UHD Graphics 710",
     "smt": true,
-    "overall_rank": 37,
+    "overall_rank": 31,
     "gaming_rank": 31,
     "ram_type": "Either"
   }

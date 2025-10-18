@@ -81,6 +81,8 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
                         return false;
                     }
 
+                    if (ramType !== 'Either' && ((selectedCPU.name.includes('AMD') && part.name.includes('Intel')) || selectedCPU.name.includes('Intel') && part.name.includes('AMD')))
+                        return false;
                     break;
 
                 case 'case':
@@ -130,6 +132,7 @@ const findOneByCondition = (data, condition, fileName, purpose, storage, cpuBran
         name: '---',
         chipset: '---',
         capacity: '---',
+        rank: '',
         price: 0.00
     }];
 };
@@ -169,15 +172,24 @@ export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, ra
         // foundItems = [candidate 0, other candidates], most suitable candidate and others
         const foundItems = findOneByCondition(fileData.default, calculatedPrice, fileName, purpose, storage, cpuBrand, gpuBrand, ramType, ramStorage, microATX, temperedGlass);
         const foundItem = foundItems[0]
-        console.log(foundItems)
+        var otherSuggestedParts = foundItems[1];
+
+        // Get the best 3 suggestions
+        if (otherSuggestedParts !== undefined) {
+            otherSuggestedParts = otherSuggestedParts.slice(0, 3);
+        }
+
+
+
         if (foundItem) {
             var children = null;
 
-            if (foundItems[1]) {
-                children = foundItems[1].map(item => ({
+            if (otherSuggestedParts) {
+                children = otherSuggestedParts.map(item => ({
                     key: `${fileName}-${item.name}`,
                     part: tableNames[index],
                     brand: item.name,
+                    rank: purpose === 'Gaming' && index == 0 ? item.gaming_rank : item.overall_rank,
                     price: item.price,
 
                 }));
@@ -191,6 +203,7 @@ export const findPcPart = async (price, purpose, storage, cpuBrand, gpuBrand, ra
                 key: `${fileName}-${foundItem.name}`,
                 part: tableNames[index],
                 brand: foundItem.name,
+                rank: purpose === 'Gaming' && index == 0 ? foundItem.gaming_rank : foundItem.overall_rank,
                 price: foundItem.price,
                 children:
                     children
